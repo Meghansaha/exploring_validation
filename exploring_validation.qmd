@@ -1,0 +1,111 @@
+---
+title: "Exploring Data Validation"
+subtitle: "\"With The  `pointblank`  Package\""
+author: "Meghan Harris, MPH"
+institute: "Cleveland R User Group"
+date: "October 26th 2022 | 2022-10-26"
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+    linkcolor: "#1a1a1a"
+    highlight-style: github
+    code-copy: true
+    code-overflow: wrap
+    transition: fade
+    width: 1600
+editor: visual
+title-slide-attributes: 
+  data-background-image: "images/title_back.PNG"
+  data-background-size: "45%"
+  data-background-position: "right"
+---
+
+## [About Me]{style="color: #000000;"} {.dark background-color="#333333"}
+
+::: columns
+::: {.column width="40%"}
+![](images/headshot.jpg){#headshot}
+:::
+
+::: {.column width="60%"}
+-   I'm Meghan Harris 👋🏾
+-   Data Scientist 💻
+-   Prostate Cancer Clinical Trials Consortium (PCCTC) - Memorial Sloan Kettering ⚛️
+-   <a href="https://thetidytrekker.com" class="link">thetidytrekker.com</a> 🌐
+-   <a href="https://twitter.com/meghansharris" class="link">@meghansharris</a> ![](images/icons/twitter.png){width="40"}
+-   <a href="https://www.linkedin.com/in/meghan-harris/" class="link">meghan-harris</a> ![](images/icons/linkedin.png){width="35" height="35"}
+:::
+:::
+
+## <span style="color: #ffffff;">What are We Doing Today? {.light background-color="#ffffff"}
+
+::: incremental
+<br>
+
+-   What is Validation?
+
+-   Why Do We Care About It?
+
+-   Different Types of Validations
+
+-   Why `pointblank`?
+
+-   `pointblank` Overview
+
+-   `pointblank` Use-Cases
+:::
+
+## [Disclaimer]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<center>
+
+<h1 style="margin-top:5%">
+
+I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
+
+</h1>
+
+::: fragment
+![](images/phony.png){.memes width="500px" height="350px"}
+:::
+
+</center>
+
+## <span style="color: #ffffff;">What is Validation? {.light background-color="#ffffff"}
+
+**Validation**: the action of checking or proving the accuracy of something.
+
+<br>
+
+::: fragment
+This can look like a lot of things:
+:::
+
+::: incremental
+-   Testing Data Inputs
+-   Testing Data Outputs
+-   Testing Pipeline Logic
+-   Enforcing Pipeline/Analysis/Data Rules
+:::
+
+## <span style="color: #ffffff;">What is Validation? {.light background-color="#ffffff"}
+
+> The art of Data Validation is a Rabbit Hole
+
+![](images/rabbithole.png){.memes fig-align="center"}
+
+## <span style="color: #000000;">Why Do We Care About It? {.dark background-color="#333333"}
+
+> Because...
+
+![](images/check_yourself.png){.memes fig-align="center"}
+
+## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
+
+## <span style="color: #ffffff;">Why `pointblank`? {.light background-color="#ffffff"}
+
+## [`pointblank` Overview]{style="color: #000000;"} {.dark background-color="#333333"}
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
