@@ -7,7 +7,7 @@
 <link href="exploring_validation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="exploring_validation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="exploring_validation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Meghan Harris, MPH">
   <title>Exploring Data Validation</title>
@@ -19,10 +19,79 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="theme.css">
@@ -329,6 +398,7 @@
 
 <section id="about-me" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">About Me</span></h2>
+<p><br></p>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><img data-src="images/headshot.jpg" id="headshot"></p>
@@ -349,9 +419,9 @@
 <div>
 <p><br></p>
 <ul>
-<li class="fragment"><p>What is Validation?</p></li>
-<li class="fragment"><p>Why Do We Care About It?</p></li>
+<li class="fragment"><p>What is Validation and Why Do We Care?</p></li>
 <li class="fragment"><p>Different Types of Validations</p></li>
+<li class="fragment"><p>What is <code>pointblank</code>?</p></li>
 <li class="fragment"><p>Why <code>pointblank</code>?</p></li>
 <li class="fragment"><p><code>pointblank</code> Overview</p></li>
 <li class="fragment"><p><code>pointblank</code> Use-Cases</p></li>
@@ -369,8 +439,8 @@
 </div>
 </center>
 </section>
-<section id="what-is-validation" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation?</span></h2>
+<section id="what-is-validation-and-why-do-we-care" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <p><strong>Validation</strong>: the action of checking or proving the accuracy of something.</p>
 <p><br></p>
 <div class="fragment">
@@ -385,31 +455,213 @@
 </ul>
 </div>
 </section>
-<section id="what-is-validation-1" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation?</span></h2>
+<section id="what-is-validation-and-why-do-we-care-1" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<blockquote>
+<p>Why is it important? … Because…</p>
+</blockquote>
+<p><br></p>
+<div class="fragment fade-in-then-out">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/check_yourself.png" class="memes"></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p><span style="color:#ffffff;">.</span></p>
+</div>
+</section>
+<section id="what-is-validation-and-why-do-we-care-2" class="slide level2 light" data-background-color="#ffffff" data-transition="none">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<blockquote>
+<p>Why is it important? … Because…</p>
+</blockquote>
+<p><br></p>
+<div>
+<ul>
+<li class="fragment">Your work is no good if it’s not right</li>
+<li class="fragment">Incorrect assumptions about data can be costly and unethical</li>
+<li class="fragment">Real world data is usually complex and nuanced</li>
+<li class="fragment">External controls may be lacking or non-existent</li>
+</ul>
+</div>
+</section>
+<section id="what-is-validation-and-why-do-we-care-3" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
 <p>The art of Data Validation is a Rabbit Hole</p>
 </blockquote>
 
 <img data-src="images/rabbithole.png" class="memes r-stretch quarto-figure-center"></section>
-<section id="why-do-we-care-about-it" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">Why Do We Care About It?</span></h2>
+<section id="what-is-validation-and-why-do-we-care-4" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
-<p>Because…</p>
+<p>Don’t fall for the <em>“Validation Crux”</em></p>
 </blockquote>
 
-<img data-src="images/check_yourself.png" class="memes r-stretch quarto-figure-center"></section>
+<img data-src="images/perfectplan.png" class="memes r-stretch quarto-figure-center"></section>
+<section id="what-is-validation-and-why-do-we-care-5" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<p><br></p>
+<ul>
+<li>Data Validation is a “rabbithole” because you could probably spend an eternity thinking about the “best” plans for validation.</li>
+</ul>
+<div>
+<ul>
+<li class="fragment">Deciding to think seriously about data validation is a humbling experience that should be done with care.</li>
+</ul>
+</div>
+<div class="fragment fade-in">
+<div class="fragment highlight-red">
+<ul>
+<li>Data validation plans should be developed with a holistic, “systems” approach that includes any applicable third parties, data management teams, data collectors, etc.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="what-is-validation-and-why-do-we-care-6" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<p><br></p>
+<p>💡Remember:</p>
+<p><br></p>
+<blockquote>
+<p>Start “small” by looking at the most important pieces of your data and figuring out the <strong>minimum building blocks</strong> of logic or assumptions that are needed to make a fairly confident guess that the data is actually accurate.</p>
+</blockquote>
+<p><br></p>
+<div class="fragment">
+<p><em><strong>Different “types” of validations</strong> can be considered as the building blocks you need to get started.</em></p>
+</div>
+<p><br></p>
+</section>
 <section id="different-types-of-validations" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">Different Types of Validations</span></h2>
+<div class="fragment fade-out">
+<ul>
+<li>There are <strong>eight basic types</strong> that I always mention…but this list is NOT exhaustive:</li>
+</ul>
+</div>
+<div class="fragment">
+<p><span style="color: #333333;">.</span></p>
+</div>
 </section>
-<section id="why-pointblank" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">Why <code>pointblank</code>?</span></h2>
+<section id="different-types-of-validations-1" class="slide level2 dark" data-background-color="#333333">
+<h2><span style="color: #000000;">Different Types of Validations</span></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><img data-src="images/vartype.png" data-fig-align="left" width="110" alt="Variable Type"></a></li><li><a href="#tabset-1-2"><img data-src="images/expvalues.png" data-fig-align="left" width="110" alt="Allowed/Expected Values"></a></li><li><a href="#tabset-1-3"><img data-src="images/missingdata.png" data-fig-align="left" width="110" alt="Missing Data"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Variable Type
+</h3>
+<p><em>“Is this variable the same class/type we are expecting?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Is R reading this as a numeric or integer variable, or is it just a string impostor?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Variable Type Check - Base R</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>actual_number <span class="ot">&lt;-</span> <span class="dv">2022</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>fake_number <span class="ot">&lt;-</span> <span class="st">"2022"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">#Actual Number?</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">is.numeric</span>(actual_number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#Actual Number?</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">is.numeric</span>(fake_number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Allowed/Expected Values
+</h3>
+<p><em>“Is the value of the variable one that is allowed or expected?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Can we confirm that the value R is reading makes sense given the context of allowed or expected values for this variable?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Allowed/Expected Values Check - Base R</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>age <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>first_name <span class="ot">&lt;-</span> <span class="st">"Meghan"</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">#Is age a valid number and over the value of zero?</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="fu">is.numeric</span>(age) <span class="sc">&amp;</span> age <span class="sc">&gt;</span> <span class="dv">0</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#Is first name a character string?</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">is.character</span>(first_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Missing Data
+</h3>
+<p><em>“Is there any missing data where there should/shouldn’t be?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Do we logically expect any values in a variable to be missing or should missing data prompt us to invesitgate the data further?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Missing Data Check - Base R</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  subject_id consent
+1        345     Yes
+2        123     Yes
+3         NA      No</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#Are sIDs missing only for those w/ no consent?</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>subject_data<span class="sc">$</span>check <span class="ot">&lt;-</span> <span class="fu">is.na</span>(subject_data<span class="sc">$</span>subject_id) <span class="sc">&amp;</span> subject_data<span class="sc">$</span>consent <span class="sc">==</span> <span class="st">"No"</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#view table</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  subject_id consent check
+1        345     Yes FALSE
+2        123     Yes FALSE
+3         NA      No  TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="pointblank-overview" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;"><code>pointblank</code> Overview</span></h2>
+<section id="what-is-pointblank" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
 </section>
-<section id="pointblank-use-cases" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
+<section id="why-pointblank" class="slide level2 dark" data-background-color="#333333">
+<h2><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
+</section>
+<section id="pointblank-overview" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Overview</span></h2>
+</section>
+<section id="pointblank-use-cases" class="slide level2 dark" data-background-color="#333333">
+<h2><span style="color: #000000;"><code>pointblank</code> Use-Cases</span></h2>
 <div class="footer footer-default">
 
 </div>
@@ -625,6 +877,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -693,7 +987,8 @@
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);

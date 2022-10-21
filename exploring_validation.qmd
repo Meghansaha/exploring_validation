@@ -12,7 +12,8 @@ format:
     linkcolor: "#1a1a1a"
     highlight-style: github
     code-copy: true
-    code-overflow: wrap
+    code-overflow: scroll
+    code-block-bg: true
     transition: fade
     width: 1600
 editor: visual
@@ -23,6 +24,8 @@ title-slide-attributes:
 ---
 
 ## [About Me]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<br>
 
 ::: columns
 ::: {.column width="40%"}
@@ -44,11 +47,11 @@ title-slide-attributes:
 ::: incremental
 <br>
 
--   What is Validation?
-
--   Why Do We Care About It?
+-   What is Validation and Why Do We Care?
 
 -   Different Types of Validations
+
+-   What is `pointblank`?
 
 -   Why `pointblank`?
 
@@ -73,7 +76,7 @@ I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
 
 </center>
 
-## <span style="color: #ffffff;">What is Validation? {.light background-color="#ffffff"}
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
 
 **Validation**: the action of checking or proving the accuracy of something.
 
@@ -90,22 +93,211 @@ This can look like a lot of things:
 -   Enforcing Pipeline/Analysis/Data Rules
 :::
 
-## <span style="color: #ffffff;">What is Validation? {.light background-color="#ffffff"}
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+> Why is it important? ... Because...
+
+<br>
+
+::: {.fragment .fade-in-then-out}
+![](images/check_yourself.png){.memes fig-align="center"}
+:::
+
+::: fragment
+[.]{style="color:#ffffff;"}
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff" transition="none"}
+
+> Why is it important? ... Because...
+
+<br>
+
+::: incremental
+-   Your work is no good if it's not right
+-   Incorrect assumptions about data can be costly and unethical
+-   Real world data is usually complex and nuanced
+-   External controls may be lacking or non-existent
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
 
 > The art of Data Validation is a Rabbit Hole
 
 ![](images/rabbithole.png){.memes fig-align="center"}
 
-## <span style="color: #000000;">Why Do We Care About It? {.dark background-color="#333333"}
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
 
-> Because...
+> Don't fall for the *"Validation Crux"*
 
-![](images/check_yourself.png){.memes fig-align="center"}
+![](images/perfectplan.png){.memes fig-align="center"}
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+<br>
+
+-   Data Validation is a "rabbithole" because you could probably spend an eternity thinking about the "best" plans for validation.
+
+::: incremental
+-   Deciding to think seriously about data validation is a humbling experience that should be done with care.
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+-   Data validation plans should be developed with a holistic, "systems" approach that includes any applicable third parties, data management teams, data collectors, etc.
+:::
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+<br>
+
+💡Remember:
+
+<br>
+
+> Start "small" by looking at the most important pieces of your data and figuring out the **minimum building blocks** of logic or assumptions that are needed to make a fairly confident guess that the data is actually accurate.
+
+<br>
+
+::: fragment
+***Different "types" of validations** can be considered as the building blocks you need to get started.*
+:::
+
+<br>
 
 ## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
 
-## <span style="color: #ffffff;">Why `pointblank`? {.light background-color="#ffffff"}
+:::{.fragment .fade-out}
+-   There are **eight basic types** that I always mention...but this list is NOT exhaustive:
+:::
 
-## [`pointblank` Overview]{style="color: #000000;"} {.dark background-color="#333333"}
+:::{.fragment}
+<span style="color: #333333;">.</span>
+:::
 
-## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
+
+::: panel-tabset
+## ![Variable Type](images/vartype.png){fig-align="left" width="110"} 
+
+::: columns
+::: {.column width="50%"}
+<h3>Variable Type</h3>
+
+*"Is this variable the same class/type we are expecting?"*
+
+<br>
+
+**Example:** - Is R reading this as a numeric or integer variable, or is it just a string impostor? 
+
+:::
+
+::: {.column width="50%" .fragment}
+
+<br>
+
+```{r vartype, echo = TRUE}
+
+# Variable Type Check - Base R
+actual_number <- 2022
+fake_number <- "2022"
+
+#Actual Number?
+is.numeric(actual_number)
+
+#Actual Number?
+is.numeric(fake_number)
+
+```
+
+:::
+:::
+
+## ![Allowed/Expected Values](images/expvalues.png){fig-align="left" width="110"} 
+
+::: columns
+::: {.column width="50%"}
+<h3>Allowed/Expected Values</h3>
+
+*"Is the value of the variable one that is allowed or expected?"*
+
+<br>
+
+**Example:** - Can we confirm that the value R is reading makes sense given the context of allowed or expected values for this variable? 
+
+:::
+
+::: {.column width="50%" .fragment}
+
+<br>
+
+```{r expvalues, echo = TRUE}
+
+# Allowed/Expected Values Check - Base R
+age <- -99
+first_name <- "Meghan"
+
+#Is age a valid number and over the value of zero?
+is.numeric(age) & age > 0 
+
+#Is first name a character string?
+is.character(first_name)
+
+```
+
+:::
+:::
+
+## ![Missing Data](images/missingdata.png){fig-align="left" width="110"} 
+
+::: columns
+::: {.column width="50%"}
+<h3>Missing Data</h3>
+
+*"Is there any missing data where there should/shouldn't be?"*
+
+<br>
+
+**Example:** - Do we logically expect any values in a variable to be missing or should missing data prompt us to invesitgate the data further? 
+
+:::
+
+::: {.column width="50%" .fragment}
+
+<br>
+
+```{r missingdata_prep, echo = FALSE}
+
+# Missing Data Check - Base R
+subject_data <- data.frame("subject_id" = c(345,123,NA),
+                           "consent" = c("Yes","Yes", "No"))
+
+```
+
+```{r missingdata, echo = TRUE}
+
+# Missing Data Check - Base R
+subject_data
+
+#Are sIDs missing only for those w/ no consent?
+subject_data$check <- is.na(subject_data$subject_id) & subject_data$consent == "No"
+
+#view table
+subject_data
+
+
+```
+
+:::
+:::
+
+:::
+
+## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
+
+## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333"}
+
+## [`pointblank` Overview]{style="color: #ffffff;"} {.light background-color="#ffffff"}
+
+## <span style="color: #000000;">`pointblank` Use-Cases {.dark background-color="#333333"}
