@@ -509,6 +509,7 @@ We've got some aggregate study data that includes the total number of patients p
 ### Example Data:
 
 ```{r data-loadin, echo = TRUE}
+
 library(readr)
 example_data <- read_csv("data/example_data.csv")
 
