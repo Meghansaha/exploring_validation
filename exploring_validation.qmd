@@ -74,6 +74,12 @@ I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
 
 </center>
 
+## {.trans background-color="#ffffff" background-image="images/trans1.png"}
+
+
+<h1><span style="color: #ffffff;"><center>What is Validation?<br>and Why Do We Care?</center></span></h1>
+
+
 ## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
 
 **Validation**: the action of checking or proving the accuracy of something.
@@ -164,6 +170,12 @@ This can look like a lot of things:
 
 <br>
 
+## {.transdark background-color="#333333" background-image="images/trans2.png"}
+
+
+<h1><span style="color: #000000;"><center>Different Types<br>of Validations</center></span></h1>
+
+
 ## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
 
 ::: {.fragment .fade-out}
@@ -181,7 +193,11 @@ This can look like a lot of things:
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Variable Type</h3>
+<h3>
+
+Variable Type
+
+</h3>
 
 *"Is this variable the same class/type we are expecting?"*
 
@@ -213,7 +229,11 @@ is.numeric(fake_number)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Allowed/Expected Values</h3>
+<h3>
+
+Allowed/Expected Values
+
+</h3>
 
 *"Is the value of the variable one that is allowed or expected?"*
 
@@ -245,7 +265,11 @@ is.character(first_name)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Missing Data</h3>
+<h3>
+
+Missing Data
+
+</h3>
 
 *"Is there any missing data where there should/shouldn't be?"*
 
@@ -281,7 +305,11 @@ which(is.na(subject_data$subject_id)) == which(subject_data$consent == "No")
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Logic Checks</h3>
+<h3>
+
+Logic Checks
+
+</h3>
 
 *"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
 
@@ -314,7 +342,11 @@ new_data <- data.frame("id" = sample(1:10))
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Logic Checks</h3>
+<h3>
+
+Logic Checks
+
+</h3>
 
 *"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
 
@@ -340,7 +372,11 @@ anyDuplicated(subject_data$subject_id) == 0
 
 ::: columns
 ::: {.column width="50%"}
-<h3>String Length</h3>
+<h3>
+
+String Length
+
+</h3>
 
 *"Is the string/character value of the right left given the context of the data?"*
 
@@ -372,7 +408,11 @@ sapply(us_zipcodes, function(x) nchar(x) == 5)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Formatting</h3>
+<h3>
+
+Formatting
+
+</h3>
 
 *"Is the general format of the data as we expect?"*
 
@@ -407,7 +447,11 @@ library(lubridate)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>Range Checks</h3>
+<h3>
+
+Range Checks
+
+</h3>
 
 *"Does the data fall into an accepted pre-determined range?"*
 
@@ -439,6 +483,11 @@ subject_data
 :::
 :::
 
+## {.trans background-color="#ffffff" background-image="images/trans3.png" background-size="80%"}
+
+
+<h1><span style="color: #ffffff;"><center>What is `pointblank`? </center></span></h1>
+
 ## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
 
 <br> Pointblank is an R package by [Rich Iannone](https://twitter.com/riannone) (author/maintainer) and Mauricio Vargas (author) that was created to assist with methodically validating data and keeping track of relevant *metadata (data about data)* in R.
@@ -462,6 +511,11 @@ subject_data
 5.  [VALID-V: Table Scan](https://rich-iannone.github.io/pointblank/articles/VALID-V.html)
 6.  [VALID-VI: R Markdown Document Validation](https://rich-iannone.github.io/pointblank/articles/VALID-VI.html)
 
+## {.transdark background-color="#333333" background-image="images/trans4.png"}
+
+
+<h1><span style="color: #000000;"><center>Why `pointblank`? </center></span></h1>
+
 ## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333"}
 
 > While you can use base R and other relevant packages like [`validate`](https://github.com/data-cleaning/validate) or [`testthat`](https://testthat.r-lib.org/) for data validation and testing in R, `pointblank` is a validation package that has a heavy focus on implementing easy reporting and methodological validation schema with ease.
@@ -471,25 +525,34 @@ subject_data
 ::: fragment
 However...
 
-<center>To a lowly beginner (like myself) `pointblank` *can* be overwhelming...</center>
+<center>
+
+To a lowly beginner (like myself) `pointblank` *can* be overwhelming...
+
+</center>
 :::
 
 ## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333" auto-animate="true"}
 
-<center>![](images/pb_functions.png){.memes width="1231" height="550"}</center>
+<center>
+
+![](images/pb_functions.png){.memes width="1231" height="550"}
+
+</center>
+
+## {.trans background-color="#ffffff" background-image="images/trans5.png" background-size="80%"}
+
+<h1><span style="color: #ffffff;"><center>`pointblank` Use-Cases</center></span></h1>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ![](images/table.png) ![](images/agent.png){style="opacity: 0;"}
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ![](images/table.png) ![](images/agent.png)
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ![](images/table.png) ![](images/agent.png) ![](images/interrogate.png)
 
@@ -500,9 +563,10 @@ However...
 <br>
 
 <blockquote>
-We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃
-</blockquote>
 
+We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃
+
+</blockquote>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
@@ -528,3 +592,8 @@ example_data
 ## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
 
 ### R Markdown Document Validation
+
+## {.transdark background-color="#333333" background-image="images/trans6.png"}
+
+
+<h1><span style="color: #000000;"><center>Questions?</center></span></h1>

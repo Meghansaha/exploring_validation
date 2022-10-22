@@ -438,6 +438,16 @@
 </div>
 </center>
 </section>
+<section id="section" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans1.png">
+<h2></h2>
+<h1>
+<span style="color: #ffffff;">
+<center>
+What is Validation?<br>and Why Do We Care?
+</center>
+</span>
+</h1>
+</section>
 <section id="what-is-validation-and-why-do-we-care" class="slide level2 light" data-background-color="#ffffff">
 <h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <p><strong>Validation</strong>: the action of checking or proving the accuracy of something.</p>
@@ -533,6 +543,16 @@
 </div>
 <p><br></p>
 </section>
+<section id="section-1" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans2.png">
+<h2></h2>
+<h1>
+<span style="color: #000000;">
+<center>
+Different Types<br>of Validations
+</center>
+</span>
+</h1>
+</section>
 <section id="different-types-of-validations" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">Different Types of Validations</span></h2>
 <div class="fragment fade-out">
@@ -553,7 +573,7 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Variable Type
+<p>Variable Type</p>
 </h3>
 <p><em>“Is this variable the same class/type we are expecting?”</em></p>
 <p><br></p>
@@ -583,7 +603,7 @@ Variable Type
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Allowed/Expected Values
+<p>Allowed/Expected Values</p>
 </h3>
 <p><em>“Is the value of the variable one that is allowed or expected?”</em></p>
 <p><br></p>
@@ -613,7 +633,7 @@ Allowed/Expected Values
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Missing Data
+<p>Missing Data</p>
 </h3>
 <p><em>“Is there any missing data where there should/shouldn’t be?”</em></p>
 <p><br></p>
@@ -645,7 +665,7 @@ Missing Data
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Logic Checks
+<p>Logic Checks</p>
 </h3>
 <p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
 <p><br></p>
@@ -671,7 +691,7 @@ Logic Checks
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Logic Checks
+<p>Logic Checks</p>
 </h3>
 <p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
 <p><br></p>
@@ -693,7 +713,7 @@ Logic Checks
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-String Length
+<p>String Length</p>
 </h3>
 <p><em>“Is the string/character value of the right left given the context of the data?”</em></p>
 <p><br></p>
@@ -720,7 +740,7 @@ String Length
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Formatting
+<p>Formatting</p>
 </h3>
 <p><em>“Is the general format of the data as we expect?”</em></p>
 <p><br></p>
@@ -750,7 +770,7 @@ Formatting
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-Range Checks
+<p>Range Checks</p>
 </h3>
 <p><em>“Does the data fall into an accepted pre-determined range?”</em></p>
 <p><br></p>
@@ -770,9 +790,9 @@ Range Checks
 <span id="cb23-7"><a href="#cb23-7"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  age over_18
-1  32    TRUE
-2  71   FALSE
-3  18    TRUE</code></pre>
+1  25    TRUE
+2   7   FALSE
+3  38    TRUE</code></pre>
 </div>
 </div>
 </div>
@@ -780,6 +800,16 @@ Range Checks
 </div>
 </div>
 </div>
+</section>
+<section id="section-2" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans3.png" data-background-size="80%">
+<h2></h2>
+<h1>
+<span style="color: #ffffff;">
+<center>
+What is <code>pointblank</code>?
+</center>
+</span>
+</h1>
 </section>
 <section id="what-is-pointblank" class="slide level2 light" data-background-color="#ffffff">
 <h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
@@ -805,6 +835,16 @@ Range Checks
 <li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-VI.html">VALID-VI: R Markdown Document Validation</a></li>
 </ol>
 </section>
+<section id="section-3" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans4.png">
+<h2></h2>
+<h1>
+<span style="color: #000000;">
+<center>
+Why <code>pointblank</code>?
+</center>
+</span>
+</h1>
+</section>
 <section id="why-pointblank" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
 <blockquote>
@@ -814,15 +854,25 @@ Range Checks
 <div class="fragment">
 <p>However…</p>
 <center>
-To a lowly beginner (like myself) <code>pointblank</code> <em>can</em> be overwhelming…
+<p>To a lowly beginner (like myself) <code>pointblank</code> <em>can</em> be overwhelming…</p>
 </center>
 </div>
 </section>
 <section id="why-pointblank-1" class="slide level2 dark" data-background-color="#333333" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
 <center>
-<img data-src="images/pb_functions.png" class="memes" width="1231" height="550">
+<p><img data-src="images/pb_functions.png" class="memes" width="1231" height="550"></p>
 </center>
+</section>
+<section id="section-4" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans5.png" data-background-size="80%">
+<h2></h2>
+<h1>
+<span style="color: #ffffff;">
+<center>
+<code>pointblank</code> Use-Cases
+</center>
+</span>
+</h1>
 </section>
 <section id="pointblank-use-cases-data-quality-reporting" class="slide level2 light" data-background-color="#ffffff">
 <h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
@@ -841,7 +891,7 @@ To a lowly beginner (like myself) <code>pointblank</code> <em>can</em> be overwh
 <h3 id="example-scenario">Example Scenario:</h3>
 <p><br></p>
 <blockquote>
-We’ve got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that’s recorded. Because this is the real world, there’s no external control in the data collection process and it’s pretty F-tier️🙃
+<p>We’ve got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that’s recorded. Because this is the real world, there’s no external control in the data collection process and it’s pretty F-tier️🙃</p>
 </blockquote>
 </section>
 <section id="pointblank-use-cases-data-quality-reporting-4" class="slide level2 light" data-background-color="#ffffff">
@@ -853,7 +903,7 @@ We’ve got some aggregate study data that includes the total number of patients
 <span id="cb25-3"><a href="#cb25-3"></a></span>
 <span id="cb25-4"><a href="#cb25-4"></a>example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 15 × 3
+<pre><code># A tibble: 15 x 3
    state          total_patients report_date   
    &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;         
  1 New Jersey     12             July, 1st 2020
@@ -885,6 +935,16 @@ We’ve got some aggregate study data that includes the total number of patients
 <section id="pointblank-use-cases-2" class="slide level2 light" data-background-color="#ffffff">
 <h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
 <h3 id="r-markdown-document-validation">R Markdown Document Validation</h3>
+</section>
+<section id="section-5" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans6.png">
+<h2></h2>
+<h1>
+<span style="color: #000000;">
+<center>
+Questions?
+</center>
+</span>
+</h1>
 <div class="footer footer-default">
 
 </div>

@@ -5,7 +5,6 @@
 :root {
   --white:#ffffff;
   --dark-gray:#333333;
-  --medium-purple:#562457;
   --black:#000000;
 }
 
@@ -164,3 +163,40 @@ body > div.reveal.focused.has-horizontal-slides.ready.fade.has-light-background 
   color: var(--dark-gray);
 }
 
+/*==============Transition Slide Specs==============*/
+
+/* slide text area background color */
+
+.trans h1 {
+  background-color: #000000;
+  color:#ffffff;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  font-size: 2em;
+  border-color: var(--dark-gray);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+}
+
+.transdark h1 {
+  background-color: #ffffff;
+  color:#000000;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 25px 15px 225px 15px/15px 225px 15px 255px;
+  border:solid 3px;
+  font-size: 2em;
+  border-color: var(--dark-gray);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.85;
+}
