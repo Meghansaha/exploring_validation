@@ -423,7 +423,6 @@
 <li class="fragment"><p>Different Types of Validations</p></li>
 <li class="fragment"><p>What is <code>pointblank</code>?</p></li>
 <li class="fragment"><p>Why <code>pointblank</code>?</p></li>
-<li class="fragment"><p><code>pointblank</code> Overview</p></li>
 <li class="fragment"><p><code>pointblank</code> Use-Cases</p></li>
 </ul>
 </div>
@@ -526,7 +525,7 @@
 <p>💡Remember:</p>
 <p><br></p>
 <blockquote>
-<p>Start “small” by looking at the most important pieces of your data and figuring out the <strong>minimum building blocks</strong> of logic or assumptions that are needed to make a fairly confident guess that the data is actually accurate.</p>
+<p>Start “small” by looking at the most important pieces of your data and figuring out the <strong>minimum building blocks</strong> of logic or assumptions that are needed to make a fairly confident guess that the data is actually accurate. It is normal for this to be an <strong>iterative</strong> process.</p>
 </blockquote>
 <p><br></p>
 <div class="fragment">
@@ -548,7 +547,7 @@
 <section id="different-types-of-validations-1" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">Different Types of Validations</span></h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><img data-src="images/vartype.png" data-fig-align="left" width="110" alt="Variable Type"></a></li><li><a href="#tabset-1-2"><img data-src="images/expvalues.png" data-fig-align="left" width="110" alt="Allowed/Expected Values"></a></li><li><a href="#tabset-1-3"><img data-src="images/missingdata.png" data-fig-align="left" width="110" alt="Missing Data"></a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><img data-src="images/vartype.png" data-fig-align="left" width="110" alt="Variable Type"></a></li><li><a href="#tabset-1-2"><img data-src="images/expvalues.png" data-fig-align="left" width="110" alt="Allowed/Expected Values"></a></li><li><a href="#tabset-1-3"><img data-src="images/missingdata.png" data-fig-align="left" width="110" alt="Missing Data"></a></li><li><a href="#tabset-1-4"><img data-src="images/logiccheck.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li><li><a href="#tabset-1-5"><img data-src="images/uniqueness.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li><li><a href="#tabset-1-6"><img data-src="images/stringlength.png" data-fig-align="left" width="110" alt="String Length"></a></li><li><a href="#tabset-1-7"><img data-src="images/formatting.png" data-fig-align="left" width="110" alt="Formatting"></a></li><li><a href="#tabset-1-8"><img data-src="images/rangechecks.png" data-fig-align="left" width="110" alt="Range Checks"></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="columns">
@@ -618,7 +617,7 @@ Missing Data
 </h3>
 <p><em>“Is there any missing data where there should/shouldn’t be?”</em></p>
 <p><br></p>
-<p><strong>Example:</strong> - Do we logically expect any values in a variable to be missing or should missing data prompt us to invesitgate the data further?</p>
+<p><strong>Example:</strong> - Do we logically expect any values in a variable to be missing or should missing data prompt us to investigate the data further?</p>
 </div><div class="column fragment" style="width:50%;">
 <p><br></p>
 <div class="cell">
@@ -633,16 +632,147 @@ Missing Data
 2        123     Yes
 3         NA      No</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#Are sIDs missing only for those w/ no consent?</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>subject_data<span class="sc">$</span>check <span class="ot">&lt;-</span> <span class="fu">is.na</span>(subject_data<span class="sc">$</span>subject_id) <span class="sc">&amp;</span> subject_data<span class="sc">$</span>consent <span class="sc">==</span> <span class="st">"No"</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a></span>
-<span id="cb11-4"><a href="#cb11-4"></a><span class="co">#view table</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#Are IDs missing only for those w/ no consent?</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">which</span>(<span class="fu">is.na</span>(subject_data<span class="sc">$</span>subject_id)) <span class="sc">==</span> <span class="fu">which</span>(subject_data<span class="sc">$</span>consent <span class="sc">==</span> <span class="st">"No"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  subject_id consent check
-1        345     Yes FALSE
-2        123     Yes FALSE
-3         NA      No  TRUE</code></pre>
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Logic Checks
+</h3>
+<p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Does the data make sense given the context of collection, processing, or analysis?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Logic Data Check - Base R</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># Is a new data frame different from an old data frame?#</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="sc">!</span><span class="fu">identical</span>(old_data, new_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Logic Checks
+</h3>
+<p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Does the data make sense given the context of collection, processing, or analysis?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Uniqueness Check - Base R</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co">#Check to see there are 0 duplicated IDs</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">anyDuplicated</span>(subject_data<span class="sc">$</span>subject_id) <span class="sc">==</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+String Length
+</h3>
+<p><em>“Is the string/character value of the right left given the context of the data?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Is the string’s length appropriate given the data’s meaning?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># String Length Check - Base R</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="co">#Do all of our "US zipcodes" have a string length of 5 characters?</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="fu">sapply</span>(us_zipcodes, <span class="cf">function</span>(x) <span class="fu">nchar</span>(x) <span class="sc">==</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>14215 14120   142 08796   867 
+ TRUE  TRUE FALSE  TRUE FALSE </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-7">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Formatting
+</h3>
+<p><em>“Is the general format of the data as we expect?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Can R confirm that our data matches a specific format that is needed for our work?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Data Format Check - Lubridate</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co">#Do all of our dates match the YYYY-MM-DD format?</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>dates</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2022-08-04" "1998/06/12" "01-15-1943"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">parse_date_time</span>(dates,<span class="at">orders=</span><span class="st">"ymd"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-8">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3>
+Range Checks
+</h3>
+<p><em>“Does the data fall into an accepted pre-determined range?”</em></p>
+<p><br></p>
+<p><strong>Example:</strong> - Can R confirm that our data matches a specific range that fits within the context of the data?</p>
+</div><div class="column fragment" style="width:50%;">
+<p><br></p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># Range Check - Base R</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="co">#Are all of the subjects 18 - 65 years old?</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4"></a>subject_data<span class="sc">$</span>over_18 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(subject_data<span class="sc">$</span>age, </span>
+<span id="cb23-5"><a href="#cb23-5"></a>                               <span class="cf">function</span>(x) x <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> x <span class="sc">&lt;=</span> <span class="dv">65</span>)</span>
+<span id="cb23-6"><a href="#cb23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age over_18
+1  31    TRUE
+2  82   FALSE
+3  67   FALSE</code></pre>
 </div>
 </div>
 </div>
@@ -653,15 +783,108 @@ Missing Data
 </section>
 <section id="what-is-pointblank" class="slide level2 light" data-background-color="#ffffff">
 <h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
+<p><br> Pointblank is an R package by <a href="https://twitter.com/riannone">Rich Iannone</a> (author/maintainer) and Mauricio Vargas (author) that was created to assist with methodically validating data and keeping track of relevant <em>metadata (data about data)</em> in R.</p>
+
+<img data-src="images/logo.svg" alt="pointblank" class="r-stretch quarto-figure-center"></section>
+<section id="what-is-pointblank-1" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
+<p><code>pointblank</code> currently has <strong>6</strong> presented validation workflows in the package:</p>
+<p><br></p>
+<ol type="1">
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-I.html">VALID-I: Data Quality Reporting</a></li>
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-II.html">VALID-II: Pipeline Data Validation</a></li>
+</ol>
+<div class="fragment semi-fade-out">
+<ol start="3" type="1">
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-III.html">VALID-III: Expectations in Unit Tests</a></li>
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-IV.html">VALID-IV: Data Tests for Conditionals</a></li>
+</ol>
+</div>
+<ol start="5" type="1">
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-V.html">VALID-V: Table Scan</a></li>
+<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-VI.html">VALID-VI: R Markdown Document Validation</a></li>
+</ol>
 </section>
 <section id="why-pointblank" class="slide level2 dark" data-background-color="#333333">
 <h2><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
+<blockquote>
+<p>While you can use base R and other relevant packages like <a href="https://github.com/data-cleaning/validate"><code>validate</code></a> or <a href="https://testthat.r-lib.org/"><code>testthat</code></a> for data validation and testing in R, <code>pointblank</code> is a validation package that has a heavy focus on implementing easy reporting and methodological validation schema with ease.</p>
+</blockquote>
+<p><br></p>
+<div class="fragment">
+<p>However…</p>
+<center>
+To a lowly beginner (like myself) <code>pointblank</code> <em>can</em> be overwhelming…
+</center>
+</div>
 </section>
-<section id="pointblank-overview" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Overview</span></h2>
+<section id="why-pointblank-1" class="slide level2 dark" data-background-color="#333333" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
+<center>
+<img data-src="images/pb_functions.png" class="memes" width="1231" height="550">
+</center>
 </section>
-<section id="pointblank-use-cases" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;"><code>pointblank</code> Use-Cases</span></h2>
+<section id="pointblank-use-cases-data-quality-reporting" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"> <img data-src="images/agent.png" style="opacity: 0;"></p>
+</section>
+<section id="pointblank-use-cases-data-quality-reporting-1" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"> <img data-src="images/agent.png"></p>
+</section>
+<section id="pointblank-use-cases-data-quality-reporting-2" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"> <img data-src="images/agent.png"> <img data-src="images/interrogate.png"></p>
+</section>
+<section id="pointblank-use-cases-data-quality-reporting-3" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="example-scenario">Example Scenario:</h3>
+<p><br></p>
+<blockquote>
+We’ve got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that’s recorded. Because this is the real world, there’s no external control in the data collection process and it’s pretty F-tier️🙃
+</blockquote>
+</section>
+<section id="pointblank-use-cases-data-quality-reporting-4" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="example-data">Example Data:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb25-2"><a href="#cb25-2"></a>example_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/example_data.csv"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3"></a></span>
+<span id="cb25-4"><a href="#cb25-4"></a>example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15 × 3
+   state          total_patients report_date   
+   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;         
+ 1 New Jersey     12             July, 1st 2020
+ 2 New York       58             8/15/2020     
+ 3 Pennslyvania   34             6/13/2020     
+ 4 Maine          12             9/1/2020      
+ 5 New Hampshire  5              Aug-20        
+ 6 Massachusetts  two            4/1/2020      
+ 7 Phode Island   35             4/1/2020      
+ 8 Connecticut    22             6/13/2020     
+ 9 Delaware       18             5/18/2020     
+10 Maryland       12             9/30/2020     
+11 Vorginia       -5             4/15/2020     
+12 North Carolina 23             2/19/2020     
+13 South Carolina 16             6/30/2020     
+14 Georgia        4              12/31/2020    
+15 Florida        15             1/31/2020     </code></pre>
+</div>
+</div>
+</section>
+<section id="pointblank-use-cases" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
+<h3 id="pipeline-data-validation">Pipeline Data Validation</h3>
+</section>
+<section id="pointblank-use-cases-1" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
+<h3 id="table-scans">Table Scans</h3>
+</section>
+<section id="pointblank-use-cases-2" class="slide level2 light" data-background-color="#ffffff">
+<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
+<h3 id="r-markdown-document-validation">R Markdown Document Validation</h3>
 <div class="footer footer-default">
 
 </div>
