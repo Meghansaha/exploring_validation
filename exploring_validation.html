@@ -6,17 +6,17 @@
 <script src="exploring_validation_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="exploring_validation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="exploring_validation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="exploring_validation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.251">
-
-  <meta name="author" content="Meghan Harris, MPH">
-  <title>Exploring Data Validation</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/reveal.css">
-  <style>
+<link href="exploring_validation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+<meta name="author" content="Meghan Harris, MPH">
+<title>Exploring Data Validation</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -93,13 +93,13 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link rel="stylesheet" href="theme.css">
-  <link href="exploring_validation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="exploring_validation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="exploring_validation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="exploring_validation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="exploring_validation_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+<link rel="stylesheet" href="theme.css">
+<link href="exploring_validation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="exploring_validation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="exploring_validation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="exploring_validation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -296,7 +296,7 @@
   }
 
   </style>
-  <style type="text/css">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -388,16 +388,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/title_back.PNG" data-background-position="right" data-background-size="45%" class="center">
-  <h1 class="title">Exploring Data Validation</h1>
+<section id="title-slide" data-background-image="images/title_back.PNG" data-background-position="right" data-background-size="45%" class="center"><h1 class="title">Exploring Data Validation</h1>
   <p class="subtitle">“With The <code>pointblank</code> Package”</p>
   <p class="author">Meghan Harris, MPH</p>
   <p class="institute">Cleveland R User Group</p>
   <p class="date">October 26th 2022 | 2022-10-26</p>
-</section>
-
-<section id="about-me" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">About Me</span></h2>
+</section><section id="about-me" class="slide level2 dark" data-background-color="#333333"><h2><span style="color: #000000;">About Me</span></h2>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -407,15 +403,18 @@
 <li>I’m Meghan Harris 👋🏾</li>
 <li>Data Scientist 💻</li>
 <li>Prostate Cancer Clinical Trials Consortium (PCCTC) - Memorial Sloan Kettering ⚛️</li>
-<li><a href="https://thetidytrekker.com" class="link">thetidytrekker.com</a> 🌐</li>
-<li><a href="https://twitter.com/meghansharris" class="link"><span class="citation" data-cites="meghansharris">@meghansharris</span></a> <img data-src="images/icons/twitter.png" width="40"></li>
-<li><a href="https://www.linkedin.com/in/meghan-harris/" class="link">meghan-harris</a> <img data-src="images/icons/linkedin.png" width="35" height="35"></li>
+<li>
+<a href="https://thetidytrekker.com" class="link">thetidytrekker.com</a> 🌐</li>
+<li>
+<a href="https://twitter.com/meghansharris" class="link"><span class="citation" data-cites="meghansharris">@meghansharris</span></a> <img data-src="images/icons/twitter.png" width="40">
+</li>
+<li>
+<a href="https://www.linkedin.com/in/meghan-harris/" class="link">meghan-harris</a> <img data-src="images/icons/linkedin.png" width="35" height="35">
+</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="what-are-we-doing-today" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What are We Doing Today?</span></h2>
+</section><section id="what-are-we-doing-today" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What are We Doing Today?</span></h2>
 <div>
 <p><br></p>
 <ul>
@@ -426,30 +425,23 @@
 <li class="fragment"><p><code>pointblank</code> Use-Cases</p></li>
 </ul>
 </div>
-</section>
-<section id="disclaimer" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">Disclaimer</span></h2>
+</section><section id="disclaimer" class="slide level2 dark" data-background-color="#333333"><h2><span style="color: #000000;">Disclaimer</span></h2>
 <center>
 <h1 style="margin-top:5%">
-<p>I’m <strong>ABSOLUTELY not an expert</strong> in Data Validation or the <code>pointblank</code> package</p>
 </h1>
+<p>I’m <strong>ABSOLUTELY not an expert</strong> in Data Validation or the <code>pointblank</code> package</p>
+
 <div class="fragment">
 <p><img data-src="images/phony.png" class="memes" width="500" height="350"></p>
 </div>
 </center>
-</section>
-<section id="section" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans1.png">
-<h2></h2>
+</section><section id="section" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans1.png" data-background-size="65%"><h2></h2>
 <h1>
-<span style="color: #ffffff;">
 <center>
-What is Validation?<br>and Why Do We Care?
+<p><span style="color: #ffffff;">What is Validation?<br>and Why Do We Care?</span></p>
 </center>
-</span>
 </h1>
-</section>
-<section id="what-is-validation-and-why-do-we-care" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+</section><section id="what-is-validation-and-why-do-we-care" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <p><strong>Validation</strong>: the action of checking or proving the accuracy of something.</p>
 <p><br></p>
 <div class="fragment">
@@ -463,26 +455,21 @@ What is Validation?<br>and Why Do We Care?
 <li class="fragment">Enforcing Pipeline/Analysis/Data Rules</li>
 </ul>
 </div>
-</section>
-<section id="what-is-validation-and-why-do-we-care-1" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+</section><section id="what-is-validation-and-why-do-we-care-1" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
 <p>Why is it important? … Because…</p>
 </blockquote>
 <p><br></p>
 <div class="fragment fade-in-then-out">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/check_yourself.png" class="memes"></p>
+<figure><p><img data-src="images/check_yourself.png" class="memes"></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <p><span style="color:#ffffff;">.</span></p>
 </div>
-</section>
-<section id="what-is-validation-and-why-do-we-care-2" class="slide level2 light" data-background-color="#ffffff" data-transition="none">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+</section><section id="what-is-validation-and-why-do-we-care-2" class="slide level2 light" data-background-color="#ffffff" data-transition="none"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
 <p>Why is it important? … Because…</p>
 </blockquote>
@@ -495,23 +482,17 @@ What is Validation?<br>and Why Do We Care?
 <li class="fragment">External controls may be lacking or non-existent</li>
 </ul>
 </div>
-</section>
-<section id="what-is-validation-and-why-do-we-care-3" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+</section><section id="what-is-validation-and-why-do-we-care-3" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
 <p>The art of Data Validation is a Rabbit Hole</p>
 </blockquote>
 
-<img data-src="images/rabbithole.png" class="memes r-stretch quarto-figure-center"></section>
-<section id="what-is-validation-and-why-do-we-care-4" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<img data-src="images/rabbithole.png" class="memes r-stretch quarto-figure-center"></section><section id="what-is-validation-and-why-do-we-care-4" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <blockquote>
 <p>Don’t fall for the <em>“Validation Crux”</em></p>
 </blockquote>
 
-<img data-src="images/perfectplan.png" class="memes r-stretch quarto-figure-center"></section>
-<section id="what-is-validation-and-why-do-we-care-5" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+<img data-src="images/perfectplan.png" class="memes r-stretch quarto-figure-center"></section><section id="what-is-validation-and-why-do-we-care-5" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <p><br></p>
 <ul>
 <li>Data Validation is a “rabbithole” because you could probably spend an eternity thinking about the “best” plans for validation.</li>
@@ -528,9 +509,7 @@ What is Validation?<br>and Why Do We Care?
 </ul>
 </div>
 </div>
-</section>
-<section id="what-is-validation-and-why-do-we-care-6" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
+</section><section id="what-is-validation-and-why-do-we-care-6" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is Validation? and Why Do We Care?</span></h2>
 <p><br></p>
 <p>💡Remember:</p>
 <p><br></p>
@@ -542,19 +521,13 @@ What is Validation?<br>and Why Do We Care?
 <p><em><strong>Different “types” of validations</strong> can be considered as the building blocks you need to get started.</em></p>
 </div>
 <p><br></p>
-</section>
-<section id="section-1" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans2.png">
-<h2></h2>
+</section><section id="section-1" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans2.png" data-background-size="65%"><h2></h2>
 <h1>
-<span style="color: #000000;">
 <center>
-Different Types<br>of Validations
+<p><span style="color: #000000;">Different Types<br>of Validations</span></p>
 </center>
-</span>
 </h1>
-</section>
-<section id="different-types-of-validations" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">Different Types of Validations</span></h2>
+</section><section id="different-types-of-validations" class="slide level2 dark" data-background-color="#333333"><h2><span style="color: #000000;">Different Types of Validations</span></h2>
 <div class="fragment fade-out">
 <ul>
 <li>There are <strong>eight basic types</strong> that I always mention…but this list is NOT exhaustive:</li>
@@ -563,23 +536,32 @@ Different Types<br>of Validations
 <div class="fragment">
 <p><span style="color: #333333;">.</span></p>
 </div>
-</section>
-<section id="different-types-of-validations-1" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">Different Types of Validations</span></h2>
+</section><section id="different-types-of-validations-1" class="slide level2 dark" data-background-color="#333333"><h2><span style="color: #000000;">Different Types of Validations</span></h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><img data-src="images/vartype.png" data-fig-align="left" width="110" alt="Variable Type"></a></li><li><a href="#tabset-1-2"><img data-src="images/expvalues.png" data-fig-align="left" width="110" alt="Allowed/Expected Values"></a></li><li><a href="#tabset-1-3"><img data-src="images/missingdata.png" data-fig-align="left" width="110" alt="Missing Data"></a></li><li><a href="#tabset-1-4"><img data-src="images/logiccheck.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li><li><a href="#tabset-1-5"><img data-src="images/uniqueness.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li><li><a href="#tabset-1-6"><img data-src="images/stringlength.png" data-fig-align="left" width="110" alt="String Length"></a></li><li><a href="#tabset-1-7"><img data-src="images/formatting.png" data-fig-align="left" width="110" alt="Formatting"></a></li><li><a href="#tabset-1-8"><img data-src="images/rangechecks.png" data-fig-align="left" width="110" alt="Range Checks"></a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1"><img data-src="images/vartype.png" data-fig-align="left" width="110" alt="Variable Type"></a></li>
+<li><a href="#tabset-1-2"><img data-src="images/expvalues.png" data-fig-align="left" width="110" alt="Allowed/Expected Values"></a></li>
+<li><a href="#tabset-1-3"><img data-src="images/missingdata.png" data-fig-align="left" width="110" alt="Missing Data"></a></li>
+<li><a href="#tabset-1-4"><img data-src="images/logiccheck.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li>
+<li><a href="#tabset-1-5"><img data-src="images/uniqueness.png" data-fig-align="left" width="110" alt="Logic Checks"></a></li>
+<li><a href="#tabset-1-6"><img data-src="images/stringlength.png" data-fig-align="left" width="110" alt="String Length"></a></li>
+<li><a href="#tabset-1-7"><img data-src="images/formatting.png" data-fig-align="left" width="110" alt="Formatting"></a></li>
+<li><a href="#tabset-1-8"><img data-src="images/rangechecks.png" data-fig-align="left" width="110" alt="Range Checks"></a></li>
+</ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Variable Type</p>
 </h3>
+<p>Variable Type</p>
+
 <p><em>“Is this variable the same class/type we are expecting?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Is R reading this as a numeric or integer variable, or is it just a string impostor?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Variable Type Check - Base R</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>actual_number <span class="ot">&lt;-</span> <span class="dv">2022</span></span>
@@ -599,17 +581,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-2">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Allowed/Expected Values</p>
 </h3>
+<p>Allowed/Expected Values</p>
+
 <p><em>“Is the value of the variable one that is allowed or expected?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Can we confirm that the value R is reading makes sense given the context of allowed or expected values for this variable?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Allowed/Expected Values Check - Base R</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>age <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span></span>
@@ -629,17 +614,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-3">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Missing Data</p>
 </h3>
+<p>Missing Data</p>
+
 <p><em>“Is there any missing data where there should/shouldn’t be?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Do we logically expect any values in a variable to be missing or should missing data prompt us to investigate the data further?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 
 </div>
@@ -661,17 +649,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-4">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Logic Checks</p>
 </h3>
+<p>Logic Checks</p>
+
 <p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Does the data make sense given the context of collection, processing, or analysis?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 
 </div>
@@ -687,17 +678,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-5">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Logic Checks</p>
 </h3>
+<p>Logic Checks</p>
+
 <p><em>“Is the data logically making sense upon delivery or after transformation/analyses/processing?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Does the data make sense given the context of collection, processing, or analysis?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Uniqueness Check - Base R</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="co">#Check to see there are 0 duplicated IDs</span></span>
@@ -709,17 +703,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-6">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>String Length</p>
 </h3>
+<p>String Length</p>
+
 <p><em>“Is the string/character value of the right left given the context of the data?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Is the string’s length appropriate given the data’s meaning?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 
 </div>
@@ -736,17 +733,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-7">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Formatting</p>
 </h3>
+<p>Formatting</p>
+
 <p><em>“Is the general format of the data as we expect?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Can R confirm that our data matches a specific format that is needed for our work?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 
 </div>
@@ -766,17 +766,20 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
+</div>
 <div id="tabset-1-8">
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3>
-<p>Range Checks</p>
 </h3>
+<p>Range Checks</p>
+
 <p><em>“Does the data fall into an accepted pre-determined range?”</em></p>
 <p><br></p>
 <p><strong>Example:</strong> - Can R confirm that our data matches a specific range that fits within the context of the data?</p>
-</div><div class="column fragment" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p><br></p>
+<div class="fragment">
 <div class="cell">
 
 </div>
@@ -790,9 +793,9 @@ Different Types<br>of Validations
 <span id="cb23-7"><a href="#cb23-7"></a>subject_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  age over_18
-1  25    TRUE
-2   7   FALSE
-3  38    TRUE</code></pre>
+1  53    TRUE
+2  17   FALSE
+3  59    TRUE</code></pre>
 </div>
 </div>
 </div>
@@ -800,53 +803,43 @@ Different Types<br>of Validations
 </div>
 </div>
 </div>
-</section>
-<section id="section-2" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans3.png" data-background-size="80%">
-<h2></h2>
+</div>
+</section><section id="section-2" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans3.png" data-background-size="65%"><h2></h2>
 <h1>
-<span style="color: #ffffff;">
 <center>
-What is <code>pointblank</code>?
+<p><span style="color: #ffffff;">What is <code>pointblank</code>?</span></p>
 </center>
-</span>
 </h1>
-</section>
-<section id="what-is-pointblank" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
+</section><section id="what-is-pointblank" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
 <p><br> Pointblank is an R package by <a href="https://twitter.com/riannone">Rich Iannone</a> (author/maintainer) and Mauricio Vargas (author) that was created to assist with methodically validating data and keeping track of relevant <em>metadata (data about data)</em> in R.</p>
 
-<img data-src="images/logo.svg" alt="pointblank" class="r-stretch quarto-figure-center"></section>
-<section id="what-is-pointblank-1" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
+<img data-src="images/logo.svg" alt="pointblank" class="r-stretch quarto-figure-center"></section><section id="what-is-pointblank-1" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;">What is <code>pointblank</code>?</span></h2>
 <p><code>pointblank</code> currently has <strong>6</strong> presented validation workflows in the package:</p>
-<p><br></p>
 <ol type="1">
-<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-I.html">VALID-I: Data Quality Reporting</a></li>
-<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-II.html">VALID-II: Pipeline Data Validation</a></li>
+<li><p><a href="https://rich-iannone.github.io/pointblank/articles/VALID-I.html">VALID-I: Data Quality Reporting</a></p></li>
+<li><p><a href="https://rich-iannone.github.io/pointblank/articles/VALID-II.html">VALID-II: Pipeline Data Validation</a></p></li>
 </ol>
 <div class="fragment semi-fade-out">
 <ol start="3" type="1">
-<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-III.html">VALID-III: Expectations in Unit Tests</a></li>
-<li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-IV.html">VALID-IV: Data Tests for Conditionals</a></li>
+<li><p><a href="https://rich-iannone.github.io/pointblank/articles/VALID-III.html">VALID-III: Expectations in Unit Tests</a></p></li>
+<li><p><a href="https://rich-iannone.github.io/pointblank/articles/VALID-IV.html">VALID-IV: Data Tests for Conditionals</a></p></li>
 </ol>
 </div>
 <ol start="5" type="1">
 <li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-V.html">VALID-V: Table Scan</a></li>
+</ol>
+<div class="fragment semi-fade-out">
+<ol start="6" type="1">
 <li><a href="https://rich-iannone.github.io/pointblank/articles/VALID-VI.html">VALID-VI: R Markdown Document Validation</a></li>
 </ol>
-</section>
-<section id="section-3" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans4.png">
-<h2></h2>
+</div>
+</section><section id="section-3" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans4.png" data-background-size="65%"><h2></h2>
 <h1>
-<span style="color: #000000;">
 <center>
-Why <code>pointblank</code>?
+<p><span style="color: #000000;">Why <code>pointblank</code>?</span></p>
 </center>
-</span>
 </h1>
-</section>
-<section id="why-pointblank" class="slide level2 dark" data-background-color="#333333">
-<h2><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
+</section><section id="why-pointblank" class="slide level2 dark" data-background-color="#333333"><h2><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
 <blockquote>
 <p>While you can use base R and other relevant packages like <a href="https://github.com/data-cleaning/validate"><code>validate</code></a> or <a href="https://testthat.r-lib.org/"><code>testthat</code></a> for data validation and testing in R, <code>pointblank</code> is a validation package that has a heavy focus on implementing easy reporting and methodological validation schema with ease.</p>
 </blockquote>
@@ -857,118 +850,1024 @@ Why <code>pointblank</code>?
 <p>To a lowly beginner (like myself) <code>pointblank</code> <em>can</em> be overwhelming…</p>
 </center>
 </div>
-</section>
-<section id="why-pointblank-1" class="slide level2 dark" data-background-color="#333333" data-auto-animate="true">
-<h2 data-id="quarto-animate-title"><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
+</section><section id="why-pointblank-1" class="slide level2 dark" data-background-color="#333333" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #000000;">Why <code>pointblank</code>?</span></h2>
 <center>
 <p><img data-src="images/pb_functions.png" class="memes" width="1231" height="550"></p>
 </center>
-</section>
-<section id="section-4" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans5.png" data-background-size="80%">
-<h2></h2>
+</section><section id="section-4" class="slide level2 trans" data-background-color="#ffffff" data-background-image="images/trans5.png" data-background-size="65%"><h2></h2>
 <h1>
-<span style="color: #ffffff;">
 <center>
-<code>pointblank</code> Use-Cases
+<p><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></p>
 </center>
-</span>
 </h1>
-</section>
-<section id="pointblank-use-cases-data-quality-reporting" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
-<p><img data-src="images/table.png"> <img data-src="images/agent.png" style="opacity: 0;"></p>
-</section>
-<section id="pointblank-use-cases-data-quality-reporting-1" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
-<p><img data-src="images/table.png"> <img data-src="images/agent.png"></p>
-</section>
-<section id="pointblank-use-cases-data-quality-reporting-2" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
-<p><img data-src="images/table.png"> <img data-src="images/agent.png"> <img data-src="images/interrogate.png"></p>
-</section>
-<section id="pointblank-use-cases-data-quality-reporting-3" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+</section><section id="pointblank-use-cases-data-quality-reporting" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/agent.png" style="opacity: 0;"></p>
+</section><section id="pointblank-use-cases-data-quality-reporting-1" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/agent.png"></p>
+</section><section id="pointblank-use-cases-data-quality-reporting-2" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/agent.png"><img data-src="images/interrogate.png"></p>
+</section><section id="pointblank-use-cases-data-quality-reporting-3" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
 <h3 id="example-scenario">Example Scenario:</h3>
 <p><br></p>
 <blockquote>
 <p>We’ve got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that’s recorded. Because this is the real world, there’s no external control in the data collection process and it’s pretty F-tier️🙃</p>
 </blockquote>
-</section>
-<section id="pointblank-use-cases-data-quality-reporting-4" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+</section><section id="pointblank-use-cases-data-quality-reporting-4" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
 <h3 id="example-data">Example Data:</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb25-2"><a href="#cb25-2"></a>example_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/example_data.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co">#example_script_1.R in the example_scripts folder#</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="fu">library</span>(readr)</span>
 <span id="cb25-3"><a href="#cb25-3"></a></span>
-<span id="cb25-4"><a href="#cb25-4"></a>example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="co">#Load in the data#</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a>example_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/example_data.csv"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6"></a></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="co">#view it - or not 🤷🏾‍♀️</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a>example_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 15 x 3
-   state          total_patients report_date   
-   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;         
- 1 New Jersey     12             July, 1st 2020
- 2 New York       58             8/15/2020     
- 3 Pennslyvania   34             6/13/2020     
- 4 Maine          12             9/1/2020      
- 5 New Hampshire  5              Aug-20        
- 6 Massachusetts  two            4/1/2020      
- 7 Phode Island   35             4/1/2020      
- 8 Connecticut    22             6/13/2020     
- 9 Delaware       18             5/18/2020     
-10 Maryland       12             9/30/2020     
-11 Vorginia       -5             4/15/2020     
-12 North Carolina 23             2/19/2020     
-13 South Carolina 16             6/30/2020     
-14 Georgia        4              12/31/2020    
-15 Florida        15             1/31/2020     </code></pre>
+<pre><code># A tibble: 5 x 3
+  state         total_patients report_date   
+  &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;         
+1 New Jersey                12 July, 1st 2020
+2 New York                  58 8/15/2020     
+3 Pennslyvania              34 6/13/2020     
+4 Mainne                    12 9/1/2020      
+5 New Hampshire             -5 8/20/2022     </code></pre>
 </div>
 </div>
-</section>
-<section id="pointblank-use-cases" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
-<h3 id="pipeline-data-validation">Pipeline Data Validation</h3>
-</section>
-<section id="pointblank-use-cases-1" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
-<h3 id="table-scans">Table Scans</h3>
-</section>
-<section id="pointblank-use-cases-2" class="slide level2 light" data-background-color="#ffffff">
-<h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases</span></h2>
-<h3 id="r-markdown-document-validation">R Markdown Document Validation</h3>
-</section>
-<section id="section-5" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans6.png">
-<h2></h2>
-<h1>
-<span style="color: #000000;">
+</section><section id="pointblank-use-cases-data-quality-reporting-5" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
 <center>
-Questions?
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+
+<div id="wjhwfdnmnl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#wjhwfdnmnl) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #333333;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_heading {
+  background-color: #333333;
+  text-align: center;
+  border-bottom-color: #333333;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_title {
+  color: #FFFFFF;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #333333;
+  border-bottom-width: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_subtitle {
+  color: #FFFFFF;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #333333;
+  border-top-width: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_col_heading {
+  color: #333333;
+  background-color: #BEBEBE;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#wjhwfdnmnl) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #BEBEBE;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#wjhwfdnmnl) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#wjhwfdnmnl) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #FFFFFF;
+  background-color: #333333;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wjhwfdnmnl) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #FFFFFF;
+  background-color: #333333;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wjhwfdnmnl) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#wjhwfdnmnl) .gt_stub {
+  color: #FFFFFF;
+  background-color: #333333;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_stub_row_group {
+  color: #FFFFFF;
+  background-color: #333333;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#wjhwfdnmnl) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#wjhwfdnmnl) .gt_summary_row {
+  color: #FFFFFF;
+  background-color: #333333;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#wjhwfdnmnl) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_grand_summary_row {
+  color: #FFFFFF;
+  background-color: #333333;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#wjhwfdnmnl) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_footnotes {
+  color: #FFFFFF;
+  background-color: #333333;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_sourcenotes {
+  color: #FFFFFF;
+  background-color: #333333;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wjhwfdnmnl) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_left {
+  text-align: left;
+}
+
+:where(#wjhwfdnmnl) .gt_center {
+  text-align: center;
+}
+
+:where(#wjhwfdnmnl) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#wjhwfdnmnl) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#wjhwfdnmnl) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#wjhwfdnmnl) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#wjhwfdnmnl) .gt_super {
+  font-size: 65%;
+}
+
+:where(#wjhwfdnmnl) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#wjhwfdnmnl) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#wjhwfdnmnl) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#wjhwfdnmnl) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#wjhwfdnmnl) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#wjhwfdnmnl) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#wjhwfdnmnl) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+<thead class="gt_header"><tr>
+<td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Study Patient Totals</td>
+    </tr></thead>
+<thead class="gt_col_headings"><tr>
+<th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">state</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">total_patients</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">report_date</th>
+    </tr></thead>
+<tbody class="gt_table_body">
+<tr>
+<td class="gt_row gt_center">New Jersey</td>
+<td class="gt_row gt_center">12</td>
+<td class="gt_row gt_center">July, 1st 2020</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">New York</td>
+<td class="gt_row gt_center">58</td>
+<td class="gt_row gt_center">8/15/2020</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Pennslyvania</td>
+<td class="gt_row gt_center">34</td>
+<td class="gt_row gt_center">6/13/2020</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">Mainne</td>
+<td class="gt_row gt_center">12</td>
+<td class="gt_row gt_center">9/1/2020</td>
+</tr>
+<tr>
+<td class="gt_row gt_center">New Hampshire</td>
+<td class="gt_row gt_center">-5</td>
+<td class="gt_row gt_center">8/20/2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </center>
-</span>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:45%;">
+<div class="fragment">
+<!-- -->
+<h3 id="make-a-plan">Make a Plan:</h3>
+</div>
+<div>
+<ul>
+<li class="fragment"><p><span style="font-size: 25px">There’s <strong>3</strong> variables (<em>columns</em>) and <strong>5</strong> observations (<em>rows</em>).</span></p></li>
+<li class="fragment"><p><span style="font-size: 25px"><code>state</code>: Official U.S states that we’d expect to be spelled correctly and capitalized.</span></p></li>
+<li class="fragment"><p><span style="font-size: 25px"><code>total_patients</code>: A total number of patients reported from each state. We’d expect this to be a numeric type and make sense. Only positive values.</span></p></li>
+<li class="fragment"><p><span style="font-size: 25px"><code>report_date</code>: A reported date of entry. We’d expect this to be a date type and have consistent formatting for each observations.</span></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-6" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<h3 id="create-an-agent">Create an Agent:</h3>
+<center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb27-1" class="hljs-ln-code"><a href="#cb27-1"></a><span class="fu">library</span>(pointblank) <span class="co">#For validation help</span></span>
+<span id="cb27-2" class="hljs-ln-code"><a href="#cb27-2"></a></span>
+<span id="cb27-3" class="hljs-ln-code"><a href="#cb27-3"></a><span class="co">#Make an agent</span></span>
+<span id="cb27-4" class="hljs-ln-code"><a href="#cb27-4"></a>patient_agent <span class="ot">&lt;-</span> <span class="fu">create_agent</span>(<span class="at">tbl =</span> example_data,</span>
+<span id="cb27-5" class="hljs-ln-code"><a href="#cb27-5"></a>                              <span class="at">tbl_name =</span> <span class="st">"Patient Totals"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:29%;">
+<h3 id="our-steps">Our Steps:</h3>
+<ol type="1">
+<li>Create an “agent”</li>
+</ol>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-7" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<h3 id="pipe-in-valdation-rules">Pipe in Valdation Rules:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="6-9|6|7|8|9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb28-1" class="hljs-ln-code"><a href="#cb28-1"></a><span class="fu">library</span>(pointblank) <span class="co">#For validation help</span></span>
+<span id="cb28-2" class="hljs-ln-code"><a href="#cb28-2"></a></span>
+<span id="cb28-3" class="hljs-ln-code"><a href="#cb28-3"></a><span class="co">#Make an agent</span></span>
+<span id="cb28-4" class="hljs-ln-code"><a href="#cb28-4"></a>patient_agent <span class="ot">&lt;-</span> <span class="fu">create_agent</span>(<span class="at">tbl =</span> example_data,</span>
+<span id="cb28-5" class="hljs-ln-code"><a href="#cb28-5"></a>                              <span class="at">tbl_name =</span> <span class="st">"Patient Totals"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-6" class="hljs-ln-code"><a href="#cb28-6"></a>  <span class="fu">col_vals_in_set</span>(state, state.name ) <span class="sc">%&gt;%</span> <span class="co">#Only valid states in the column?</span></span>
+<span id="cb28-7" class="hljs-ln-code"><a href="#cb28-7"></a>  <span class="fu">col_is_numeric</span>(total_patients) <span class="sc">%&gt;%</span> <span class="co">#Is column type numeric?</span></span>
+<span id="cb28-8" class="hljs-ln-code"><a href="#cb28-8"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="co">#Only values greater than 0 in the column?</span></span>
+<span id="cb28-9" class="hljs-ln-code"><a href="#cb28-9"></a>  <span class="fu">col_is_date</span>(report_date) <span class="co">#Is column type date?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:29%;">
+<h3 id="our-steps-1">Our Steps:</h3>
+<ol type="1">
+<li>Create an “Agent”</li>
+<li>Pipe in Validation Rules</li>
+</ol>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-8" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<h3 id="interrogate-the-agent">Interrogate the Agent:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="11-13"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb29-1" class="hljs-ln-code"><a href="#cb29-1"></a><span class="fu">library</span>(pointblank) <span class="co">#For validation help</span></span>
+<span id="cb29-2" class="hljs-ln-code"><a href="#cb29-2"></a></span>
+<span id="cb29-3" class="hljs-ln-code"><a href="#cb29-3"></a><span class="co">#Make an agent#</span></span>
+<span id="cb29-4" class="hljs-ln-code"><a href="#cb29-4"></a>patient_agent <span class="ot">&lt;-</span> <span class="fu">create_agent</span>(<span class="at">tbl =</span> example_data,</span>
+<span id="cb29-5" class="hljs-ln-code"><a href="#cb29-5"></a>                              <span class="at">tbl_name =</span> <span class="st">"Patient Totals"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-6" class="hljs-ln-code"><a href="#cb29-6"></a>  <span class="fu">col_vals_in_set</span>(state, state.name ) <span class="sc">%&gt;%</span> <span class="co">#Only valid states in the column?</span></span>
+<span id="cb29-7" class="hljs-ln-code"><a href="#cb29-7"></a>  <span class="fu">col_is_numeric</span>(total_patients) <span class="sc">%&gt;%</span> <span class="co">#Is column type numeric?</span></span>
+<span id="cb29-8" class="hljs-ln-code"><a href="#cb29-8"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="co">#Only values greater than 0 in the column?</span></span>
+<span id="cb29-9" class="hljs-ln-code"><a href="#cb29-9"></a>  <span class="fu">col_is_date</span>(report_date) <span class="co">#Is column type date?</span></span>
+<span id="cb29-10" class="hljs-ln-code"><a href="#cb29-10"></a></span>
+<span id="cb29-11" class="hljs-ln-code"><a href="#cb29-11"></a><span class="co">#interrogate it#</span></span>
+<span id="cb29-12" class="hljs-ln-code"><a href="#cb29-12"></a>patient_agent <span class="sc">%&gt;%</span></span>
+<span id="cb29-13" class="hljs-ln-code"><a href="#cb29-13"></a>  <span class="fu">interrogate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:29%;">
+<h3 id="our-steps-2">Our Steps:</h3>
+<ol type="1">
+<li>Create an “Agent”</li>
+<li>Pipe in Validation Rules<br>
+</li>
+<li>Interrogate the Agent</li>
+</ol>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-9" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="interrogation-results-in-viewer-pane">Interrogation Results in Viewer Pane:</h3>
+<center>
+<p><img data-src="images/dqr_result.png"></p>
+</center>
+</section><section id="pointblank-use-cases-data-quality-reporting-10" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result2.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><br><strong>Date/Time/Object Metadata</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-11" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-1">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result3.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><strong><code>STEP</code>: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-12" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-2">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result4.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><br><strong><code>COLUMNS</code>: The target columns we told the agent to interrogate via our validation rules</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-13" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-3">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result5.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><strong><code>VALUES</code>: Any required values needed/used to test for validation if applicable.</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-14" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-4">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result6.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<p><br><br><strong><code>TBL</code>: Let’s us know if the table was mutated in a validation step.</strong> <br><br><strong><code>EVAL</code>: Let’s us know if there’s issues R might have evaluating the table itself.</strong></p>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-15" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-5">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result7.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<p><br><strong><code>UNITS</code>: Gives the total number of tests ran for each step</strong> <br><br></p>
+<div class="fragment">
+<p><span style="font-size: 25px"><em>Steps that check all values in a column =</em> <strong><em>5</em></strong> <em>because we have five rows of data</em></span></p>
+</div>
+<div class="fragment">
+<p><span style="font-size: 25px"><em>Steps that just check a whole column =</em> <strong><em>1</em></strong> <em>because it’s just evaluating one column</em></span></p>
+</div>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-16" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-6">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result8.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<p><br><br><br><strong><code>PASS</code>/<code>FAIL</code>: Gives the number/percentage of passing and failing unit tests</strong></p>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-17" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-7">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result9.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><strong><code>W,S,N</code>: Tells us if the validation steps have entered <code>WARN</code>, <code>STOP</code>, or <code>NOTIFY</code>. This is empty because there’s no <code>action levels</code> set.</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-18" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="breaking-it-down-8">Breaking it Down:</h3>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/dqr_result10.png"></p>
+</div><div class="column" style="width:40%;">
+<center>
+<br><br><br><strong><code>EXT</code>: Provides a download of a data extract of observations that failed any validations if applicable.</strong>
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-19" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="data-extracts">Data Extracts:</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="4|5-6"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb30-1" class="hljs-ln-code"><a href="#cb30-1"></a><span class="co">#Generate a data extract#</span></span>
+<span id="cb30-2" class="hljs-ln-code"><a href="#cb30-2"></a>patient_agent <span class="sc">%&gt;%</span></span>
+<span id="cb30-3" class="hljs-ln-code"><a href="#cb30-3"></a>  <span class="fu">interrogate</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb30-4" class="hljs-ln-code"><a href="#cb30-4"></a>  <span class="fu">get_data_extracts</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb30-5" class="hljs-ln-code"><a href="#cb30-5"></a>  <span class="fu">setNames</span>(<span class="fu">c</span>(<span class="st">"State Validation Fails"</span>,</span>
+<span id="cb30-6" class="hljs-ln-code"><a href="#cb30-6"></a>             <span class="st">"Patient Total Validation Fails"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$`State Validation Fails`
+# A tibble: 2 x 3
+  state        total_patients report_date
+  &lt;chr&gt;                 &lt;dbl&gt; &lt;chr&gt;      
+1 Pennslyvania             34 6/13/2020  
+2 Mainne                   12 9/1/2020   
+
+$`Patient Total Validation Fails`
+# A tibble: 1 x 3
+  state         total_patients report_date
+  &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;      
+1 New Hampshire             -5 8/20/2022  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-20" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<h3 id="setting-optional-action_levels">Setting optional <code>action_levels()</code>:</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="1-4,9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">#Make an action levels object#</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a>al <span class="ot">&lt;-</span> <span class="fu">action_levels</span>(<span class="at">warn_at =</span> <span class="fl">0.2</span>, </span>
+<span id="cb32-3"><a href="#cb32-3"></a>                    <span class="at">stop_at =</span> <span class="fl">0.5</span>,</span>
+<span id="cb32-4"><a href="#cb32-4"></a>                    <span class="at">notify_at =</span> <span class="dv">1</span>)</span>
+<span id="cb32-5"><a href="#cb32-5"></a></span>
+<span id="cb32-6"><a href="#cb32-6"></a><span class="co">#Make an agent#</span></span>
+<span id="cb32-7"><a href="#cb32-7"></a>patient_agent <span class="ot">&lt;-</span> <span class="fu">create_agent</span>(<span class="at">tbl =</span> example_data,</span>
+<span id="cb32-8"><a href="#cb32-8"></a>                              <span class="at">tbl_name =</span> <span class="st">"Patient Totals"</span>,</span>
+<span id="cb32-9"><a href="#cb32-9"></a>                              <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb32-10"><a href="#cb32-10"></a>  <span class="fu">col_vals_in_set</span>(state, state.name ) <span class="sc">%&gt;%</span> <span class="co">#Only valid states in the column?</span></span>
+<span id="cb32-11"><a href="#cb32-11"></a>  <span class="fu">col_is_numeric</span>(total_patients) <span class="sc">%&gt;%</span> <span class="co">#Is column type numeric?</span></span>
+<span id="cb32-12"><a href="#cb32-12"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="co">#Only values greater than 0 in the column?</span></span>
+<span id="cb32-13"><a href="#cb32-13"></a>  <span class="fu">col_is_date</span>(report_date) <span class="co">#Is column type date?</span></span>
+<span id="cb32-14"><a href="#cb32-14"></a></span>
+<span id="cb32-15"><a href="#cb32-15"></a><span class="co">#interrogate it#</span></span>
+<span id="cb32-16"><a href="#cb32-16"></a>patient_agent <span class="sc">%&gt;%</span></span>
+<span id="cb32-17"><a href="#cb32-17"></a>  <span class="fu">interrogate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:1%;">
+
+</div><div class="column" style="width:29%;">
+<p><br> - <span style="font-size: 30px">We can use <code>action_levels()</code> to give our agent more directives when interrogating our data.</span></p>
+<p><br> - <span style="font-size: 30px">We can set the fraction/percentage levels of validation failure that determines when the agent warns us, or stops the process altogether.</span></p>
+</div>
+</div>
+</section><section id="pointblank-use-cases-data-quality-reporting-21" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Data Quality Reporting</span></h2>
+<h3 id="interrogation-results-with-action_levels-in-viewer-pane">Interrogation Results (With <code>action_levels()</code>) in Viewer Pane:</h3>
+<center>
+<p><img data-src="images/actionresults.png"></p>
+</center>
+</section><section id="pointblank-use-cases-pipeline-data-validation" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/rules.png" style="opacity: 0;"></p>
+</section><section id="pointblank-use-cases-pipeline-data-validation-1" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/rules.png"></p>
+</section><section id="pointblank-use-cases-pipeline-data-validation-2" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<p><img data-src="images/table.png"><img data-src="images/rules.png"><img data-src="images/sideeffects.png"></p>
+</section><section id="pointblank-use-cases-pipeline-data-validation-3" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="apply-validation-rules-directly-to-the-table">Apply Validation Rules Directly to the Table:</h3>
+<br><center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb33-1" class="hljs-ln-code"><a href="#cb33-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb33-2" class="hljs-ln-code"><a href="#cb33-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb33-3" class="hljs-ln-code"><a href="#cb33-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-4" class="hljs-ln-code"><a href="#cb33-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb33-5" class="hljs-ln-code"><a href="#cb33-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb33-6" class="hljs-ln-code"><a href="#cb33-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb33-7" class="hljs-ln-code"><a href="#cb33-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb33-8" class="hljs-ln-code"><a href="#cb33-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:42%;">
+
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-4" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="apply-validation-rules-directly-to-the-table-1">Apply Validation Rules Directly to the Table:</h3>
+<br><center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34" data-code-line-numbers="1-3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb34-1" class="hljs-ln-code"><a href="#cb34-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb34-2" class="hljs-ln-code"><a href="#cb34-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb34-3" class="hljs-ln-code"><a href="#cb34-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb34-4" class="hljs-ln-code"><a href="#cb34-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb34-5" class="hljs-ln-code"><a href="#cb34-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb34-6" class="hljs-ln-code"><a href="#cb34-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb34-7" class="hljs-ln-code"><a href="#cb34-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb34-8" class="hljs-ln-code"><a href="#cb34-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:42%;">
+<h3 id="action-possibilities">Action Possibilities:</h3>
+<ul>
+<li>Use <code>warn_on_fail()</code> for targeted warnings</li>
+</ul>
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-5" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="apply-validation-rules-directly-to-the-table-2">Apply Validation Rules Directly to the Table:</h3>
+<br><center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb35-1" class="hljs-ln-code"><a href="#cb35-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb35-2" class="hljs-ln-code"><a href="#cb35-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb35-3" class="hljs-ln-code"><a href="#cb35-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb35-4" class="hljs-ln-code"><a href="#cb35-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb35-5" class="hljs-ln-code"><a href="#cb35-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb35-6" class="hljs-ln-code"><a href="#cb35-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb35-7" class="hljs-ln-code"><a href="#cb35-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb35-8" class="hljs-ln-code"><a href="#cb35-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:42%;">
+<h3 id="action-possibilities-1">Action Possibilities:</h3>
+<ul>
+<li><p>Use <code>warn_on_fail()</code> for targeted warnings</p></li>
+<li><p>Use <code>stop_on_fail()</code> for targeted stops/error catches</p></li>
+</ul>
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-6" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="apply-validation-rules-directly-to-the-table-3">Apply Validation Rules Directly to the Table:</h3>
+<br><center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb36-1" class="hljs-ln-code"><a href="#cb36-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb36-2" class="hljs-ln-code"><a href="#cb36-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb36-3" class="hljs-ln-code"><a href="#cb36-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb36-4" class="hljs-ln-code"><a href="#cb36-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb36-5" class="hljs-ln-code"><a href="#cb36-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-6" class="hljs-ln-code"><a href="#cb36-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb36-7" class="hljs-ln-code"><a href="#cb36-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb36-8" class="hljs-ln-code"><a href="#cb36-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:42%;">
+<h3 id="action-possibilities-2">Action Possibilities:</h3>
+<ul>
+<li><p>Use <code>warn_on_fail()</code> for targeted warnings</p></li>
+<li><p>Use <code>stop_on_fail()</code> for targeted stops/error catches</p></li>
+<li><p>Use an <code>action_levels()</code> object for more control</p></li>
+</ul>
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-7" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="apply-validation-rules-directly-to-the-table-4">Apply Validation Rules Directly to the Table:</h3>
+<br><center>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb37-1" class="hljs-ln-code"><a href="#cb37-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb37-2" class="hljs-ln-code"><a href="#cb37-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb37-3" class="hljs-ln-code"><a href="#cb37-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4" class="hljs-ln-code"><a href="#cb37-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb37-5" class="hljs-ln-code"><a href="#cb37-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb37-6" class="hljs-ln-code"><a href="#cb37-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb37-7" class="hljs-ln-code"><a href="#cb37-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb37-8" class="hljs-ln-code"><a href="#cb37-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</center>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:42%;">
+<h3 id="action-possibilities-3">Action Possibilities:</h3>
+<ul>
+<li><p>Use <code>warn_on_fail()</code> for targeted warnings</p></li>
+<li><p>Use <code>stop_on_fail()</code> for targeted stops/error catches</p></li>
+<li><p>Use an <code>action_levels()</code> object for more control</p></li>
+<li><p>Use no actions at all for basic testing</p></li>
+</ul>
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-8" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<h3 id="the-goal-is-the-side-effects-to-maintainhalt-the-workflow">The goal is the side-effects to maintain/halt the workflow:</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb38-1" class="hljs-ln-code"><a href="#cb38-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb38-2" class="hljs-ln-code"><a href="#cb38-2"></a>  <span class="fu">col_vals_in_set</span>(state, state.name,</span>
+<span id="cb38-3" class="hljs-ln-code"><a href="#cb38-3"></a>                  <span class="at">actions =</span> <span class="fu">warn_on_fail</span>(<span class="at">warn_at =</span> .<span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-4" class="hljs-ln-code"><a href="#cb38-4"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb38-5" class="hljs-ln-code"><a href="#cb38-5"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-6" class="hljs-ln-code"><a href="#cb38-6"></a>  <span class="fu">col_vals_gte</span>(total_patients,<span class="sc">-</span><span class="dv">0</span>,</span>
+<span id="cb38-7" class="hljs-ln-code"><a href="#cb38-7"></a>               <span class="at">actions =</span> al) <span class="sc">%&gt;%</span></span>
+<span id="cb38-8" class="hljs-ln-code"><a href="#cb38-8"></a>  <span class="fu">col_is_date</span>(report_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: Failure to validate that column `report_date` is of type: Date.
+The `col_is_date()` validation failed beyond the absolute threshold level (1).
+* failure level (1) &gt;= failure threshold (1)</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<br><br><br><center>
+Fails will <span style="color:red;"><strong>halt</strong></span> R’s workflow
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-pipeline-data-validation-9" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Pipeline Data Validation</span></h2>
+<h3 id="the-goal-is-the-side-effects-to-maintainhalt-the-workflow-1">The goal is the side-effects to maintain/halt the workflow:</h3>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">col_is_numeric</span>(total_patients,</span>
+<span id="cb40-3"><a href="#cb40-3"></a>                 <span class="at">actions =</span> <span class="fu">stop_on_fail</span>(<span class="at">stop_at =</span> <span class="dv">1</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 x 3
+  state         total_patients report_date   
+  &lt;chr&gt;                  &lt;dbl&gt; &lt;chr&gt;         
+1 New Jersey                12 July, 1st 2020
+2 New York                  58 8/15/2020     
+3 Pennslyvania              34 6/13/2020     
+4 Mainne                    12 9/1/2020      
+5 New Hampshire             -5 8/20/2022     </code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<br><br><br><center>
+Passes will <span style="color:green;"><strong>maintain</strong></span> R’s workflow
+</center>
+</div>
+</div>
+</section><section id="pointblank-use-cases-table-scans" class="slide level2 light" data-background-color="#ffffff"><h2><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Table Scans</span></h2>
+<center>
+<p><img data-src="images/scan.png"></p>
+</center>
+</section><section id="pointblank-use-cases-table-scans-1" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Table Scans</span></h2>
+<p><br></p>
+<h3 id="sometimes-alwayswe-should-just-look-at-our-data">Sometimes (always)…we should just look at our data… 🤷🏾‍</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb42-1" class="hljs-ln-code"><a href="#cb42-1"></a><span class="co">#Use the scan_data function to generate an HTML output#</span></span>
+<span id="cb42-2" class="hljs-ln-code"><a href="#cb42-2"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb42-3" class="hljs-ln-code"><a href="#cb42-3"></a>  <span class="fu">scan_data</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Simply use <code>scan_data()</code> to generated an automated <a href="table_scan.html">HTML output</a> that gives information about the table.</li>
+</ul>
+</div>
+</div>
+</section><section id="pointblank-use-cases-table-scans-2" class="slide level2 light" data-background-color="#ffffff" data-auto-animate="true"><h2 data-id="quarto-animate-title"><span style="color: #ffffff;"><code>pointblank</code> Use-Cases: Table Scans</span></h2>
+<p><br></p>
+<h3 id="we-can-also-set-some-options">We can also set <a href="mod_scan.html">some options</a>…</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb43-1" class="hljs-ln-code"><a href="#cb43-1"></a><span class="co">#Use the scan_data function to generate an HTML output#</span></span>
+<span id="cb43-2" class="hljs-ln-code"><a href="#cb43-2"></a><span class="co">#With options#</span></span>
+<span id="cb43-3" class="hljs-ln-code"><a href="#cb43-3"></a>example_data <span class="sc">%&gt;%</span></span>
+<span id="cb43-4" class="hljs-ln-code"><a href="#cb43-4"></a>  <span class="fu">scan_data</span>(<span class="at">sections =</span> <span class="st">"OV"</span>,</span>
+<span id="cb43-5" class="hljs-ln-code"><a href="#cb43-5"></a>            <span class="at">navbar =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb43-6" class="hljs-ln-code"><a href="#cb43-6"></a>            <span class="at">lang =</span> <span class="st">"es"</span>,</span>
+<span id="cb43-7" class="hljs-ln-code"><a href="#cb43-7"></a>            <span class="at">width =</span> <span class="dv">500</span>,</span>
+<span id="cb43-8" class="hljs-ln-code"><a href="#cb43-8"></a>            <span class="at">locale =</span> <span class="st">"es_ES"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:3%;">
+
+</div><div class="column" style="width:47%;">
+<ul>
+<li><span style="font-size:25px;"><code>sections</code> - “OVICMS” (Overview, Variables, Interactions, Correlations, Missing Values, Sample)</span></li>
+<li><span style="font-size:25px;"><code>navbar</code> - Toggles the navigation bar on/off</span></li>
+<li><span style="font-size:25px;"><code>lang</code> - Chooses a language to present the report in: (English, French, German, Italian, Spanish, Portuguese, Chinese, Russian)</span></li>
+<li><span style="font-size:25px;"><code>width</code> - Width of the HTML report</span></li>
+<li><span style="font-size:25px;"><code>locale</code> - Sets the region/locale for formatting numerical values.</span></li>
+</ul>
+</div>
+</div>
+</section><section id="section-5" class="slide level2 transdark" data-background-color="#333333" data-background-image="images/trans6.png" data-background-size="65%"><h2></h2>
+<h1>
+<center>
+<p><span style="color: #000000;">Questions?</span></p>
+</center>
 </h1>
 <div class="footer footer-default">
 
 </div>
 </section>
-    </div>
+</div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="exploring_validation_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="exploring_validation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="exploring_validation_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="exploring_validation_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="exploring_validation_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="exploring_validation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/notes/notes.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/search/search.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="exploring_validation_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -1159,9 +2058,7 @@ Questions?
           RevealZoom
         ]
       });
-    </script>
-    
-    <script>
+    </script><script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
@@ -1200,9 +2097,7 @@ Questions?
         }
 
       })();
-    </script>
-
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -1299,6 +2194,6 @@ Questions?
       }
     });
     </script>
-    
+
 
 </body></html>

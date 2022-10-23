@@ -12,6 +12,7 @@ format:
     linkcolor: "#1a1a1a"
     highlight-style: github
     code-copy: true
+    code-link: true
     code-overflow: wrap
     code-block-bg: true
     transition: fade
@@ -74,11 +75,17 @@ I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
 
 </center>
 
-## {.trans background-color="#ffffff" background-image="images/trans1.png"}
+##  {.trans background-color="#ffffff" background-image="images/trans1.png" background-size="65%"}
 
+<h1>
 
-<h1><span style="color: #ffffff;"><center>What is Validation?<br>and Why Do We Care?</center></span></h1>
+<center>
 
+[ What is Validation?<br>and Why Do We Care? ]{style="color: #ffffff;"}
+
+</center>
+
+</h1>
 
 ## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
 
@@ -170,11 +177,17 @@ This can look like a lot of things:
 
 <br>
 
-## {.transdark background-color="#333333" background-image="images/trans2.png"}
+##  {.transdark background-color="#333333" background-image="images/trans2.png" background-size="65%"}
 
+<h1>
 
-<h1><span style="color: #000000;"><center>Different Types<br>of Validations</center></span></h1>
+<center>
 
+[ Different Types<br>of Validations ]{style="color: #000000;"}
+
+</center>
+
+</h1>
 
 ## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
 
@@ -206,8 +219,12 @@ Variable Type
 **Example:** - Is R reading this as a numeric or integer variable, or is it just a string impostor?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
+
 
 ```{r vartype, echo = TRUE}
 
@@ -222,6 +239,8 @@ is.numeric(actual_number)
 is.numeric(fake_number)
 
 ```
+
+:::
 :::
 :::
 
@@ -242,8 +261,11 @@ Allowed/Expected Values
 **Example:** - Can we confirm that the value R is reading makes sense given the context of allowed or expected values for this variable?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r expvalues, echo = TRUE}
 
@@ -258,6 +280,8 @@ is.numeric(age) & age > 0
 is.character(first_name)
 
 ```
+
+:::
 :::
 :::
 
@@ -278,8 +302,11 @@ Missing Data
 **Example:** - Do we logically expect any values in a variable to be missing or should missing data prompt us to investigate the data further?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r missingdata_prep, echo = FALSE}
 
@@ -300,6 +327,7 @@ which(is.na(subject_data$subject_id)) == which(subject_data$consent == "No")
 ```
 :::
 :::
+:::
 
 ## ![Logic Checks](images/logiccheck.png){fig-align="left" width="110"}
 
@@ -318,8 +346,11 @@ Logic Checks
 **Example:** - Does the data make sense given the context of collection, processing, or analysis?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r logic_prep, echo = FALSE}
 
@@ -335,6 +366,7 @@ new_data <- data.frame("id" = sample(1:10))
 # Is a new data frame different from an old data frame?#
 !identical(old_data, new_data)
 ```
+:::
 :::
 :::
 
@@ -355,8 +387,11 @@ Logic Checks
 **Example:** - Does the data make sense given the context of collection, processing, or analysis?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r uniqueness, echo = TRUE}
 
@@ -367,7 +402,7 @@ anyDuplicated(subject_data$subject_id) == 0
 ```
 :::
 :::
-
+:::
 ## ![String Length](images/stringlength.png){fig-align="left" width="110"}
 
 ::: columns
@@ -385,8 +420,11 @@ String Length
 **Example:** - Is the string's length appropriate given the data's meaning?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r stringlengthprep, echo = FALSE}
 
@@ -401,6 +439,7 @@ us_zipcodes <- c("14215", "14120", "142", "08796", "867")
 
 sapply(us_zipcodes, function(x) nchar(x) == 5)
 ```
+:::
 :::
 :::
 
@@ -421,8 +460,11 @@ Formatting
 **Example:** - Can R confirm that our data matches a specific format that is needed for our work?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r formatprep, echo = FALSE}
 
@@ -440,6 +482,7 @@ dates
 library(lubridate)
 !is.na(parse_date_time(dates,orders="ymd"))
 ```
+:::
 :::
 :::
 
@@ -460,8 +503,11 @@ Range Checks
 **Example:** - Can R confirm that our data matches a specific range that fits within the context of the data?
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
+
 <br>
+
+:::{.fragment}
 
 ```{r rangeprep, echo = FALSE}
 
@@ -482,11 +528,19 @@ subject_data
 :::
 :::
 :::
+:::
 
-## {.trans background-color="#ffffff" background-image="images/trans3.png" background-size="80%"}
+##  {.trans background-color="#ffffff" background-image="images/trans3.png" background-size="65%"}
 
+<h1>
 
-<h1><span style="color: #ffffff;"><center>What is `pointblank`? </center></span></h1>
+<center>
+
+[ What is `pointblank`? ]{style="color: #ffffff;"}
+
+</center>
+
+</h1>
 
 ## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
 
@@ -498,23 +552,34 @@ subject_data
 
 `pointblank` currently has **6** presented validation workflows in the package:
 
-<br>
 
 1.  [VALID-I: Data Quality Reporting](https://rich-iannone.github.io/pointblank/articles/VALID-I.html)
+
 2.  [VALID-II: Pipeline Data Validation](https://rich-iannone.github.io/pointblank/articles/VALID-II.html)
 
 ::: {.fragment .semi-fade-out}
 3.  [VALID-III: Expectations in Unit Tests](https://rich-iannone.github.io/pointblank/articles/VALID-III.html)
+
 4.  [VALID-IV: Data Tests for Conditionals](https://rich-iannone.github.io/pointblank/articles/VALID-IV.html)
 :::
 
 5.  [VALID-V: Table Scan](https://rich-iannone.github.io/pointblank/articles/VALID-V.html)
+
+::: {.fragment .semi-fade-out}
 6.  [VALID-VI: R Markdown Document Validation](https://rich-iannone.github.io/pointblank/articles/VALID-VI.html)
+:::
 
-## {.transdark background-color="#333333" background-image="images/trans4.png"}
+##  {.transdark background-color="#333333" background-image="images/trans4.png" background-size="65%"}
 
+<h1>
 
-<h1><span style="color: #000000;"><center>Why `pointblank`? </center></span></h1>
+<center>
+
+[ Why `pointblank`? ]{style="color: #000000;"}
+
+</center>
+
+</h1>
 
 ## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333"}
 
@@ -540,9 +605,17 @@ To a lowly beginner (like myself) `pointblank` *can* be overwhelming...
 
 </center>
 
-## {.trans background-color="#ffffff" background-image="images/trans5.png" background-size="80%"}
+##  {.trans background-color="#ffffff" background-image="images/trans5.png" background-size="65%"}
 
-<h1><span style="color: #ffffff;"><center>`pointblank` Use-Cases</center></span></h1>
+<h1>
+
+<center>
+
+[ `pointblank` Use-Cases ]{style="color: #ffffff;"}
+
+</center>
+
+</h1>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
@@ -572,28 +645,794 @@ We've got some aggregate study data that includes the total number of patients p
 
 ### Example Data:
 
-```{r data-loadin, echo = TRUE}
-
+```{r dqr_data_loadin, echo = TRUE}
+#example_script_1.R in the example_scripts folder#
 library(readr)
+
+#Load in the data#
 example_data <- read_csv("data/example_data.csv")
 
+#view it - or not 🤷🏾‍♀️
 example_data
 
 ```
 
-## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-### Pipeline Data Validation
+::: columns
+::: {.column width="50%"}
+<br>
 
-## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+<center>
 
-### Table Scans
+```{r dqr_data_table, echo = FALSE, fig.align='center'}
+library(gt)
+library(gtExtras)
+example_data |>
+  gt() |>
+  tab_header(title = "Study Patient Totals") |>
+  tab_options(table.background.color = "#333333",
+              column_labels.background.color = "grey") |>
+  cols_align("center")
+```
 
-## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+</center>
+:::
 
-### R Markdown Document Validation
+::: {.column width="5%"}
+:::
 
-## {.transdark background-color="#333333" background-image="images/trans6.png"}
+::: {.column width="45%"}
+::: fragment
+### Make a Plan:
+:::
+
+::: incremental
+-   [There's **3** variables (*columns*) and **5** observations (*rows*).]{style="font-size: 25px"}</span>
+
+-   [`state`: Official U.S states that we'd expect to be spelled correctly and capitalized.]{style="font-size: 25px"}
+
+-   [`total_patients`: A total number of patients reported from each state. We'd expect this to be a numeric type and make sense. Only positive values.]{style="font-size: 25px"}
+
+-   [`report_date`: A reported date of entry. We'd expect this to be a date type and have consistent formatting for each observations.]{style="font-size: 25px"}
+:::
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="70%"}
+
+### Create an Agent:
+<center>
+
+```{r dqr_val1, echo = TRUE}
+library(pointblank) #For validation help
+
+#Make an agent
+patient_agent <- create_agent(tbl = example_data,
+                              tbl_name = "Patient Totals")
+
+```
+
+</center>
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="29%"}
+
+### Our Steps:
+
+1. Create an "agent"
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="70%"}
+
+### Pipe in Valdation Rules:
+
+```{r dqr_val2, echo = TRUE, `code-line-numbers`="6-9|6|7|8|9"}
+library(pointblank) #For validation help
+
+#Make an agent
+patient_agent <- create_agent(tbl = example_data,
+                              tbl_name = "Patient Totals") %>%
+  col_vals_in_set(state, state.name ) %>% #Only valid states in the column?
+  col_is_numeric(total_patients) %>% #Is column type numeric?
+  col_vals_gte(total_patients,0) %>% #Only values greater than 0 in the column?
+  col_is_date(report_date) #Is column type date?
+
+```
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="29%"}
+
+### Our Steps:
+
+1.    Create an "Agent"
+2.    Pipe in Validation Rules
+
+:::
+:::
 
 
-<h1><span style="color: #000000;"><center>Questions?</center></span></h1>
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="70%"}
+
+### Interrogate the Agent:
+
+```{r dqr_val3, echo = TRUE, results='hide', `code-line-numbers`="11-13"}
+library(pointblank) #For validation help
+
+#Make an agent#
+patient_agent <- create_agent(tbl = example_data,
+                              tbl_name = "Patient Totals") %>%
+  col_vals_in_set(state, state.name ) %>% #Only valid states in the column?
+  col_is_numeric(total_patients) %>% #Is column type numeric?
+  col_vals_gte(total_patients,0) %>% #Only values greater than 0 in the column?
+  col_is_date(report_date) #Is column type date?
+
+#interrogate it#
+patient_agent %>%
+  interrogate()
+
+```
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="29%"}
+
+### Our Steps:
+
+1.    Create an "Agent"
+2.    Pipe in Validation Rules  
+3.    Interrogate the Agent
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Interrogation Results in Viewer Pane:
+
+<center>
+
+![](images/dqr_result.png)
+
+</center>
+
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result2.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br><br>
+**Date/Time/Object Metadata**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result3.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br>
+**`STEP`: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result4.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br><br>
+**`COLUMNS`: The target columns we told the agent to interrogate via our validation rules**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result5.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br>
+**`VALUES`: Any required values needed/used to test for validation if applicable.**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result6.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br>
+**`TBL`: Let's us know if the table was mutated in a validation step.**
+<br><br>
+**`EVAL`: Let's us know if there's issues R might have evaluating the table itself.**
+
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result7.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br>
+**`UNITS`: Gives the total number of tests ran for each step**
+<br><br>
+
+:::fragment
+<span style="font-size: 25px">*Steps that check all values in a column =* ***5*** *because we have five rows of data*</span>
+:::
+
+:::fragment
+<span style="font-size: 25px">*Steps that just check a whole column =* ***1*** *because it's just evaluating one column*</span>
+:::
+
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result8.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br><br>
+**`PASS`/`FAIL`: Gives the number/percentage of passing and failing unit tests**
+
+
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result9.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br>
+**`W,S,N`: Tells us if the validation steps have entered `WARN`, `STOP`, or `NOTIFY`. This is empty because there's no `action levels` set.**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Breaking it Down:
+
+::::columns
+::: {.column width="60%"}
+
+![](images/dqr_result10.png)
+
+:::
+
+:::{.column width="40%"}
+<center>
+<br><br><br>
+**`EXT`: Provides a download of a data extract of observations that failed any validations if applicable.**
+</center>
+:::
+
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
+
+### Data Extracts:
+
+::::columns
+::: {.column width="50%"}
+```{r dqr_ext, echo = TRUE, results='hide', `code-line-numbers`="4|5-6"}
+#Generate a data extract#
+patient_agent %>%
+  interrogate() %>%
+  get_data_extracts() %>%
+  setNames(c("State Validation Fails",
+             "Patient Total Validation Fails"))
+```
+:::
+::: {.column width="50%"}
+```{r dqr_ext2, echo = FALSE}
+#Generate a data extract#
+patient_agent %>%
+  interrogate() %>%
+  get_data_extracts() %>%
+  setNames(c("State Validation Fails",
+             "Patient Total Validation Fails"))
+```
+:::
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+::: columns
+::: {.column width="70%"}
+
+### Setting optional `action_levels()`:
+
+```{r dqr_als, echo = TRUE, results='hide', `code-line-numbers`="1-4,9"}
+#Make an action levels object#
+al <- action_levels(warn_at = 0.2, 
+                    stop_at = 0.5,
+                    notify_at = 1)
+
+#Make an agent#
+patient_agent <- create_agent(tbl = example_data,
+                              tbl_name = "Patient Totals",
+                              actions = al) %>%
+  col_vals_in_set(state, state.name ) %>% #Only valid states in the column?
+  col_is_numeric(total_patients) %>% #Is column type numeric?
+  col_vals_gte(total_patients,0) %>% #Only values greater than 0 in the column?
+  col_is_date(report_date) #Is column type date?
+
+#interrogate it#
+patient_agent %>%
+  interrogate()
+
+```
+
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="29%"}
+
+<br>
+-   [We can use `action_levels()` to give our agent more directives when interrogating our data.]{style="font-size: 30px"}
+
+<br>
+-   [We can set the fraction/percentage levels of validation failure that determines when the agent warns us, or stops the process altogether.]{style="font-size: 30px"}
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+
+### Interrogation Results (With `action_levels()`) in Viewer Pane:
+
+<center>
+
+![](images/actionresults.png)
+
+</center>
+
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/rules.png){style="opacity: 0;"}
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/rules.png)
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/rules.png) ![](images/sideeffects.png)
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="55%"}
+
+### Apply Validation Rules Directly to the Table:
+<br>
+<center>
+
+```{r pl_val1, eval = FALSE, echo = TRUE}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+
+</center>
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="42%"}
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="55%"}
+
+### Apply Validation Rules Directly to the Table:
+<br>
+<center>
+
+```{r pl_val2, eval = FALSE, echo = TRUE,`code-line-numbers`="1-3"}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+
+</center>
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="42%"}
+
+### Action Possibilities:
+
+-   Use `warn_on_fail()` for targeted warnings
+
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="55%"}
+
+### Apply Validation Rules Directly to the Table:
+<br>
+<center>
+
+```{r pl_val3, eval = FALSE, echo = TRUE,`code-line-numbers`="4-5"}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+
+</center>
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="42%"}
+
+### Action Possibilities:
+
+-   Use `warn_on_fail()` for targeted warnings
+
+-   Use `stop_on_fail()` for targeted stops/error catches
+
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="55%"}
+
+### Apply Validation Rules Directly to the Table:
+<br>
+<center>
+
+```{r pl_val4, eval = FALSE, echo = TRUE,`code-line-numbers`="6-7"}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+
+</center>
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="42%"}
+
+### Action Possibilities:
+
+-   Use `warn_on_fail()` for targeted warnings
+
+-   Use `stop_on_fail()` for targeted stops/error catches
+
+-   Use an `action_levels()` object for more control
+
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+::: columns
+::: {.column width="55%"}
+
+### Apply Validation Rules Directly to the Table:
+<br>
+<center>
+
+```{r pl_val5, eval = FALSE, echo = TRUE,`code-line-numbers`="8"}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+
+</center>
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="42%"}
+
+### Action Possibilities:
+
+-   Use `warn_on_fail()` for targeted warnings
+
+-   Use `stop_on_fail()` for targeted stops/error catches
+
+-   Use an `action_levels()` object for more control
+
+-   Use no actions at all for basic testing
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
+
+
+### The goal is the side-effects to maintain/halt the workflow:
+<br>
+
+:::columns
+:::{.column width="50%"}
+```{r pl_val_error, echo = TRUE, error=TRUE}
+example_data %>%
+  col_vals_in_set(state, state.name,
+                  actions = warn_on_fail(warn_at = .6)) %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) %>% 
+  col_vals_gte(total_patients,-0,
+               actions = al) %>%
+  col_is_date(report_date)
+```
+:::
+
+:::{.column width="50%"}
+<br><br><br>
+<center>Fails will <span style="color:red;">**halt**</span> R's workflow</center>
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
+
+
+### The goal is the side-effects to maintain/halt the workflow:
+<br>
+
+:::columns
+:::{.column width="50%"}
+
+```{r pl_val_pass, echo = TRUE}
+example_data %>%
+  col_is_numeric(total_patients,
+                 actions = stop_on_fail(stop_at = 1)) 
+```
+
+:::
+
+:::{.column width="50%"}
+
+<br><br><br>
+<center>Passes will <span style="color:green;">**maintain**</span> R's workflow</center>
+
+:::
+:::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff"}
+
+<center>
+![](images/scan.png)
+
+</center>
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff" auto-animate="true"}
+
+<br>
+
+### Sometimes (always)...we should just look at our data... 🤷🏾‍
+
+::::columns
+:::{.column width="50%"}
+
+<br>
+```{r scan1, echo = TRUE, eval = FALSE}
+#Use the scan_data function to generate an HTML output#
+example_data %>%
+  scan_data()
+```
+
+:::
+:::{.column width="50%"}
+
+
+-   Simply use `scan_data()` to generated an automated [HTML output](table_scan.html) that gives information about the table.
+ 
+:::
+::::
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff" auto-animate="true"}
+
+<br>
+
+### We can also set [some options](mod_scan.html)...
+
+::::columns
+:::{.column width="50%"}
+
+<br>
+
+```{r scan2, echo = TRUE, eval = FALSE}
+#Use the scan_data function to generate an HTML output#
+#With options#
+example_data %>%
+  scan_data(sections = "OV",
+            navbar = FALSE,
+            lang = "es",
+            width = 500,
+            locale = "es_ES")
+```
+
+:::
+
+:::{.column width="3%"}
+:::
+
+:::{.column width="47%"}
+
+  -   <span style="font-size:25px;">`sections` - "OVICMS" (Overview, Variables, Interactions, Correlations, Missing Values, Sample)</span>
+  -   <span style="font-size:25px;">`navbar` - Toggles the navigation bar on/off</span>
+  -   <span style="font-size:25px;">`lang` - Chooses a language to present the report in: (English, French, German, Italian, Spanish, Portuguese, Chinese, Russian)</span>
+  -   <span style="font-size:25px;">`width` - Width of the HTML report</span>
+  -   <span style="font-size:25px;">`locale` - Sets the region/locale for formatting numerical values.</span>
+
+:::
+::::
+
+
+##  {.transdark background-color="#333333" background-image="images/trans6.png" background-size="65%"}
+
+<h1>
+
+<center>
+
+[Questions?]{style="color: #000000;"}
+
+</center>
+
+</h1>
