@@ -81,7 +81,7 @@ I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
 
 <center>
 
-[ What is Validation?<br>and Why Do We Care? ]{style="color: #ffffff;"}
+[What is Validation?<br>and Why Do We Care?]{style="color: #ffffff;"}
 
 </center>
 
@@ -183,7 +183,7 @@ This can look like a lot of things:
 
 <center>
 
-[ Different Types<br>of Validations ]{style="color: #000000;"}
+[Different Types<br>of Validations]{style="color: #000000;"}
 
 </center>
 
@@ -220,12 +220,9 @@ Variable Type
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
-
+::: fragment
 ```{r vartype, echo = TRUE}
 
 # Variable Type Check - Base R
@@ -239,7 +236,6 @@ is.numeric(actual_number)
 is.numeric(fake_number)
 
 ```
-
 :::
 :::
 :::
@@ -262,11 +258,9 @@ Allowed/Expected Values
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r expvalues, echo = TRUE}
 
 # Allowed/Expected Values Check - Base R
@@ -280,7 +274,6 @@ is.numeric(age) & age > 0
 is.character(first_name)
 
 ```
-
 :::
 :::
 :::
@@ -303,11 +296,9 @@ Missing Data
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r missingdata_prep, echo = FALSE}
 
 # Missing Data Check - Base R
@@ -347,11 +338,9 @@ Logic Checks
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r logic_prep, echo = FALSE}
 
 # Logic Check - Base R
@@ -388,11 +377,9 @@ Logic Checks
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r uniqueness, echo = TRUE}
 
 # Uniqueness Check - Base R
@@ -403,6 +390,7 @@ anyDuplicated(subject_data$subject_id) == 0
 :::
 :::
 :::
+
 ## ![String Length](images/stringlength.png){fig-align="left" width="110"}
 
 ::: columns
@@ -421,11 +409,9 @@ String Length
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r stringlengthprep, echo = FALSE}
 
 us_zipcodes <- c("14215", "14120", "142", "08796", "867")
@@ -461,11 +447,9 @@ Formatting
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r formatprep, echo = FALSE}
 
 dates <- c("2022-08-04", "1998/06/12", "01-15-1943")
@@ -504,11 +488,9 @@ Range Checks
 :::
 
 ::: {.column width="50%"}
-
 <br>
 
-:::{.fragment}
-
+::: fragment
 ```{r rangeprep, echo = FALSE}
 
 subject_data <- data.frame("age" = sample(5:90, 3))
@@ -536,7 +518,7 @@ subject_data
 
 <center>
 
-[ What is `pointblank`? ]{style="color: #ffffff;"}
+[What is `pointblank`?]{style="color: #ffffff;"}
 
 </center>
 
@@ -551,7 +533,6 @@ subject_data
 ## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
 
 `pointblank` currently has **6** presented validation workflows in the package:
-
 
 1.  [VALID-I: Data Quality Reporting](https://rich-iannone.github.io/pointblank/articles/VALID-I.html)
 
@@ -575,7 +556,7 @@ subject_data
 
 <center>
 
-[ Why `pointblank`? ]{style="color: #000000;"}
+[Why `pointblank`?]{style="color: #000000;"}
 
 </center>
 
@@ -611,7 +592,7 @@ To a lowly beginner (like myself) `pointblank` *can* be overwhelming...
 
 <center>
 
-[ `pointblank` Use-Cases ]{style="color: #ffffff;"}
+[`pointblank` Use-Cases]{style="color: #ffffff;"}
 
 </center>
 
@@ -703,8 +684,8 @@ example_data |>
 
 ::: columns
 ::: {.column width="70%"}
-
 ### Create an Agent:
+
 <center>
 
 ```{r dqr_val1, echo = TRUE}
@@ -723,11 +704,9 @@ patient_agent <- create_agent(tbl = example_data,
 :::
 
 ::: {.column width="29%"}
-
 ### Our Steps:
 
-1. Create an "agent"
-
+1.  Create an "agent"
 :::
 :::
 
@@ -735,7 +714,6 @@ patient_agent <- create_agent(tbl = example_data,
 
 ::: columns
 ::: {.column width="70%"}
-
 ### Pipe in Valdation Rules:
 
 ```{r dqr_val2, echo = TRUE, `code-line-numbers`="6-9|6|7|8|9"}
@@ -750,29 +728,23 @@ patient_agent <- create_agent(tbl = example_data,
   col_is_date(report_date) #Is column type date?
 
 ```
-
 :::
 
 ::: {.column width="1%"}
 :::
 
 ::: {.column width="29%"}
-
 ### Our Steps:
 
-1.    Create an "Agent"
-2.    Pipe in Validation Rules
-
+1.  Create an "Agent"
+2.  Pipe in Validation Rules
 :::
 :::
-
-
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
 
 ::: columns
 ::: {.column width="70%"}
-
 ### Interrogate the Agent:
 
 ```{r dqr_val3, echo = TRUE, results='hide', `code-line-numbers`="11-13"}
@@ -791,25 +763,21 @@ patient_agent %>%
   interrogate()
 
 ```
-
 :::
 
 ::: {.column width="1%"}
 :::
 
 ::: {.column width="29%"}
-
 ### Our Steps:
 
-1.    Create an "Agent"
-2.    Pipe in Validation Rules  
-3.    Interrogate the Agent
-
+1.  Create an "Agent"
+2.  Pipe in Validation Rules\
+3.  Interrogate the Agent
 :::
 :::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ### Interrogation Results in Viewer Pane:
 
@@ -819,216 +787,181 @@ patient_agent %>%
 
 </center>
 
-
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result2.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br><br>
-**Date/Time/Object Metadata**
+
+<br><br><br> **Date/Time/Object Metadata**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result3.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br>
-**`STEP`: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed**
+
+<br><br> **`STEP`: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result4.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br><br>
-**`COLUMNS`: The target columns we told the agent to interrogate via our validation rules**
+
+<br><br><br> **`COLUMNS`: The target columns we told the agent to interrogate via our validation rules**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result5.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br>
-**`VALUES`: Any required values needed/used to test for validation if applicable.**
+
+<br><br> **`VALUES`: Any required values needed/used to test for validation if applicable.**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result6.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br>
-**`TBL`: Let's us know if the table was mutated in a validation step.**
-<br><br>
-**`EVAL`: Let's us know if there's issues R might have evaluating the table itself.**
+
+<br><br> **`TBL`: Let's us know if the table was mutated in a validation step.** <br><br> **`EVAL`: Let's us know if there's issues R might have evaluating the table itself.**
 
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result7.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br>
-**`UNITS`: Gives the total number of tests ran for each step**
-<br><br>
 
-:::fragment
-<span style="font-size: 25px">*Steps that check all values in a column =* ***5*** *because we have five rows of data*</span>
+<br> **`UNITS`: Gives the total number of tests ran for each step** <br><br>
+
+::: fragment
+[*Steps that check all values in a column =* ***5*** *because we have five rows of data*]{style="font-size: 25px"}
 :::
 
-:::fragment
-<span style="font-size: 25px">*Steps that just check a whole column =* ***1*** *because it's just evaluating one column*</span>
+::: fragment
+[*Steps that just check a whole column =* ***1*** *because it's just evaluating one column*]{style="font-size: 25px"}
 :::
 
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result8.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br><br>
-**`PASS`/`FAIL`: Gives the number/percentage of passing and failing unit tests**
 
+<br><br><br> **`PASS`/`FAIL`: Gives the number/percentage of passing and failing unit tests**
 
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result9.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br>
-**`W,S,N`: Tells us if the validation steps have entered `WARN`, `STOP`, or `NOTIFY`. This is empty because there's no `action levels` set.**
+
+<br><br> **`W,S,N`: Tells us if the validation steps have entered `WARN`, `STOP`, or `NOTIFY`. This is empty because there's no `action levels` set.**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ### Breaking it Down:
 
-::::columns
+::: columns
 ::: {.column width="60%"}
-
 ![](images/dqr_result10.png)
-
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 <center>
-<br><br><br>
-**`EXT`: Provides a download of a data extract of observations that failed any validations if applicable.**
+
+<br><br><br> **`EXT`: Provides a download of a data extract of observations that failed any validations if applicable.**
+
 </center>
 :::
-
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff" auto-animate="true"}
 
 ### Data Extracts:
 
-::::columns
+::: columns
 ::: {.column width="50%"}
 ```{r dqr_ext, echo = TRUE, results='hide', `code-line-numbers`="4|5-6"}
 #Generate a data extract#
@@ -1039,6 +972,7 @@ patient_agent %>%
              "Patient Total Validation Fails"))
 ```
 :::
+
 ::: {.column width="50%"}
 ```{r dqr_ext2, echo = FALSE}
 #Generate a data extract#
@@ -1049,13 +983,12 @@ patient_agent %>%
              "Patient Total Validation Fails"))
 ```
 :::
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
 ::: columns
 ::: {.column width="70%"}
-
 ### Setting optional `action_levels()`:
 
 ```{r dqr_als, echo = TRUE, results='hide', `code-line-numbers`="1-4,9"}
@@ -1078,24 +1011,19 @@ patient_agent %>%
   interrogate()
 
 ```
-
 :::
 
 ::: {.column width="1%"}
 :::
 
 ::: {.column width="29%"}
+<br> - [We can use `action_levels()` to give our agent more directives when interrogating our data.]{style="font-size: 30px"}
 
-<br>
--   [We can use `action_levels()` to give our agent more directives when interrogating our data.]{style="font-size: 30px"}
-
-<br>
--   [We can set the fraction/percentage levels of validation failure that determines when the agent warns us, or stops the process altogether.]{style="font-size: 30px"}
+<br> - [We can set the fraction/percentage levels of validation failure that determines when the agent warns us, or stops the process altogether.]{style="font-size: 30px"}
 :::
 :::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ### Interrogation Results (With `action_levels()`) in Viewer Pane:
 
@@ -1104,7 +1032,6 @@ patient_agent %>%
 ![](images/actionresults.png)
 
 </center>
-
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
 
@@ -1122,9 +1049,10 @@ patient_agent %>%
 
 ::: columns
 ::: {.column width="55%"}
-
 ### Apply Validation Rules Directly to the Table:
+
 <br>
+
 <center>
 
 ```{r pl_val1, eval = FALSE, echo = TRUE}
@@ -1145,7 +1073,6 @@ example_data %>%
 :::
 
 ::: {.column width="42%"}
-
 :::
 :::
 
@@ -1153,9 +1080,10 @@ example_data %>%
 
 ::: columns
 ::: {.column width="55%"}
-
 ### Apply Validation Rules Directly to the Table:
+
 <br>
+
 <center>
 
 ```{r pl_val2, eval = FALSE, echo = TRUE,`code-line-numbers`="1-3"}
@@ -1176,12 +1104,9 @@ example_data %>%
 :::
 
 ::: {.column width="42%"}
-
 ### Action Possibilities:
 
 -   Use `warn_on_fail()` for targeted warnings
-
-
 :::
 :::
 
@@ -1189,9 +1114,10 @@ example_data %>%
 
 ::: columns
 ::: {.column width="55%"}
-
 ### Apply Validation Rules Directly to the Table:
+
 <br>
+
 <center>
 
 ```{r pl_val3, eval = FALSE, echo = TRUE,`code-line-numbers`="4-5"}
@@ -1212,14 +1138,11 @@ example_data %>%
 :::
 
 ::: {.column width="42%"}
-
 ### Action Possibilities:
 
 -   Use `warn_on_fail()` for targeted warnings
 
 -   Use `stop_on_fail()` for targeted stops/error catches
-
-
 :::
 :::
 
@@ -1227,9 +1150,10 @@ example_data %>%
 
 ::: columns
 ::: {.column width="55%"}
-
 ### Apply Validation Rules Directly to the Table:
+
 <br>
+
 <center>
 
 ```{r pl_val4, eval = FALSE, echo = TRUE,`code-line-numbers`="6-7"}
@@ -1250,7 +1174,6 @@ example_data %>%
 :::
 
 ::: {.column width="42%"}
-
 ### Action Possibilities:
 
 -   Use `warn_on_fail()` for targeted warnings
@@ -1258,8 +1181,6 @@ example_data %>%
 -   Use `stop_on_fail()` for targeted stops/error catches
 
 -   Use an `action_levels()` object for more control
-
-
 :::
 :::
 
@@ -1267,9 +1188,10 @@ example_data %>%
 
 ::: columns
 ::: {.column width="55%"}
-
 ### Apply Validation Rules Directly to the Table:
+
 <br>
+
 <center>
 
 ```{r pl_val5, eval = FALSE, echo = TRUE,`code-line-numbers`="8"}
@@ -1290,7 +1212,6 @@ example_data %>%
 :::
 
 ::: {.column width="42%"}
-
 ### Action Possibilities:
 
 -   Use `warn_on_fail()` for targeted warnings
@@ -1305,12 +1226,12 @@ example_data %>%
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff" auto-animate="true"}
 
-
 ### The goal is the side-effects to maintain/halt the workflow:
+
 <br>
 
-:::columns
-:::{.column width="50%"}
+::: columns
+::: {.column width="50%"}
 ```{r pl_val_error, echo = TRUE, error=TRUE}
 example_data %>%
   col_vals_in_set(state, state.name,
@@ -1323,40 +1244,47 @@ example_data %>%
 ```
 :::
 
-:::{.column width="50%"}
+::: {.column width="50%"}
 <br><br><br>
-<center>Fails will <span style="color:red;">**halt**</span> R's workflow</center>
+
+<center>
+
+Fails will [**halt**]{style="color:red;"} R's workflow
+
+</center>
 :::
 :::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
 
-
 ### The goal is the side-effects to maintain/halt the workflow:
+
 <br>
 
-:::columns
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 ```{r pl_val_pass, echo = TRUE}
 example_data %>%
   col_is_numeric(total_patients,
                  actions = stop_on_fail(stop_at = 1)) 
 ```
-
 :::
 
-:::{.column width="50%"}
-
+::: {.column width="50%"}
 <br><br><br>
-<center>Passes will <span style="color:green;">**maintain**</span> R's workflow</center>
 
+<center>
+
+Passes will [**maintain**]{style="color:green;"} R's workflow
+
+</center>
 :::
 :::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff"}
 
 <center>
+
 ![](images/scan.png)
 
 </center>
@@ -1367,24 +1295,21 @@ example_data %>%
 
 ### Sometimes (always)...we should just look at our data... 🤷🏾‍
 
-::::columns
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 <br>
+
 ```{r scan1, echo = TRUE, eval = FALSE}
 #Use the scan_data function to generate an HTML output#
 example_data %>%
   scan_data()
 ```
-
 :::
-:::{.column width="50%"}
 
-
+::: {.column width="50%"}
 -   Simply use `scan_data()` to generated an automated [HTML output](table_scan.html) that gives information about the table.
- 
 :::
-::::
+:::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff" auto-animate="true"}
 
@@ -1392,9 +1317,8 @@ example_data %>%
 
 ### We can also set [some options](mod_scan.html)...
 
-::::columns
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 <br>
 
 ```{r scan2, echo = TRUE, eval = FALSE}
@@ -1407,23 +1331,19 @@ example_data %>%
             width = 500,
             locale = "es_ES")
 ```
-
 :::
 
-:::{.column width="3%"}
+::: {.column width="3%"}
 :::
 
-:::{.column width="47%"}
-
-  -   <span style="font-size:25px;">`sections` - "OVICMS" (Overview, Variables, Interactions, Correlations, Missing Values, Sample)</span>
-  -   <span style="font-size:25px;">`navbar` - Toggles the navigation bar on/off</span>
-  -   <span style="font-size:25px;">`lang` - Chooses a language to present the report in: (English, French, German, Italian, Spanish, Portuguese, Chinese, Russian)</span>
-  -   <span style="font-size:25px;">`width` - Width of the HTML report</span>
-  -   <span style="font-size:25px;">`locale` - Sets the region/locale for formatting numerical values.</span>
-
+::: {.column width="47%"}
+-   [`sections` - "OVICMS" (Overview, Variables, Interactions, Correlations, Missing Values, Sample)]{style="font-size:25px;"}
+-   [`navbar` - Toggles the navigation bar on/off]{style="font-size:25px;"}
+-   [`lang` - Chooses a language to present the report in: (English, French, German, Italian, Spanish, Portuguese, Chinese, Russian)]{style="font-size:25px;"}
+-   [`width` - Width of the HTML report]{style="font-size:25px;"}
+-   [`locale` - Sets the region/locale for formatting numerical values.]{style="font-size:25px;"}
 :::
-::::
-
+:::
 
 ##  {.transdark background-color="#333333" background-image="images/trans6.png" background-size="65%"}
 
