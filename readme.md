@@ -3,9 +3,9 @@
 
 ![](images/readmelogo.png)
 
-</center>
-
 # Resources for “*Exploring Data Validation with the `pointblank` Package*
+
+</center>
 
 ## About
 
