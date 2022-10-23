@@ -359,21 +359,21 @@ new_data <- data.frame("id" = sample(1:10))
 :::
 :::
 
-## ![Logic Checks](images/uniqueness.png){fig-align="left" width="110"}
+## ![Uniqueness](images/uniqueness.png){fig-align="left" width="110"}
 
 ::: columns
 ::: {.column width="50%"}
 <h3>
 
-Logic Checks
+Uniqueness
 
 </h3>
 
-*"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
+*"Should we expect data values to be unique or duplicated?"*
 
 <br>
 
-**Example:** - Does the data make sense given the context of collection, processing, or analysis?
+**Example:** - Given the context of the data, do we expect R to find any duplicates? Is it a bad thing or have any meaning if present?
 :::
 
 ::: {.column width="50%"}
