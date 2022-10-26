@@ -673,7 +673,7 @@ patient_agent <- create_agent(tbl = example_data,
 ### Our Steps:
 
 1.  Create an "Agent"
-2.  Pipe in Validation Rules
+2.  Pipe in [Validation Rules](https://rich-iannone.github.io/pointblank/reference/index.html#validation-expectation-and-test-functions)
 :::
 :::
 
@@ -708,7 +708,7 @@ patient_agent %>%
 ### Our Steps:
 
 1.  Create an "Agent"
-2.  Pipe in Validation Rules\
+2.  Pipe in [Validation Rules](https://rich-iannone.github.io/pointblank/reference/index.html#validation-expectation-and-test-functions)
 3.  Interrogate the Agent
 :::
 :::
