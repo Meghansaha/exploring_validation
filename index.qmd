@@ -1191,7 +1191,7 @@ example_data %>%
 :::
 
 ::: {.column width="50%"}
--   Simply use `scan_data()` to generated an automated [HTML output](table_scan.html) that gives information about the table.
+-   Simply use `scan_data()` to generate an automated [HTML output](table_scan.html) that gives information about the table.
 :::
 :::
 
