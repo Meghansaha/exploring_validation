@@ -480,16 +480,13 @@ However...
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ![](images/table.png) ![](images/agent.png){style="opacity: 0;"}
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
-
 ![](images/table.png) ![](images/agent.png)
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
-
 
 ![](images/table.png) ![](images/agent.png) ![](images/interrogate.png)
 
@@ -499,10 +496,7 @@ However...
 
 <br>
 
-<blockquote>
-We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃
-</blockquote>
-
+<blockquote>We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃</blockquote>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
