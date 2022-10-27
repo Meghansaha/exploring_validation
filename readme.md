@@ -24,9 +24,8 @@ validate their own data in R.
 The slides for this workshop can be viewed
 [here](https://meghansaha.github.io/exploring_validation/).
 
-It is expected that this presentation will be recorded and available on
-YouTube at a later date. The link will be placed here when the recording
-is complete and ready.
+The recording for this presentation is available on YouTube
+[here](https://t.co/181jd0X3e9)
 
 ## More Data Validation Resources
 
