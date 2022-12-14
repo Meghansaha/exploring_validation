@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 
 
-# Resources for "*Exploring Data Validation with the `pointblank` Package*
+# Resources for "*Exploring Data Validation with the `pointblank` Package*"
 
 </center>
 
@@ -27,7 +27,7 @@ This repository contains supplemental resources and materials that coincide with
 
 The slides for this workshop can be viewed [here](https://meghansaha.github.io/exploring_validation/).
 
-This presentation was recorded and is available on YouTube [here](https://t.co/181jd0X3e9).
+The recording for this presentation is available on YouTube [here](https://t.co/181jd0X3e9)
 
 ## More Data Validation Resources
 

@@ -79,11 +79,7 @@ I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
 
 <h1>
 
-<center>
-
-[What is Validation?<br>and Why Do We Care?]{style="color: #ffffff;"}
-
-</center>
+<center>[What is Validation?<br>and Why Do We Care?]{style="color: #ffffff;"}</center>
 
 </h1>
 
@@ -181,11 +177,7 @@ This can look like a lot of things:
 
 <h1>
 
-<center>
-
-[Different Types<br>of Validations]{style="color: #000000;"}
-
-</center>
+<center>[Different Types<br>of Validations]{style="color: #000000;"}</center>
 
 </h1>
 
@@ -206,11 +198,7 @@ This can look like a lot of things:
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Variable Type
-
-</h3>
+<h3>Variable Type</h3>
 
 *"Is this variable the same class/type we are expecting?"*
 
@@ -244,11 +232,7 @@ is.numeric(fake_number)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Allowed/Expected Values
-
-</h3>
+<h3>Allowed/Expected Values</h3>
 
 *"Is the value of the variable one that is allowed or expected?"*
 
@@ -282,11 +266,7 @@ is.character(first_name)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Missing Data
-
-</h3>
+<h3>Missing Data</h3>
 
 *"Is there any missing data where there should/shouldn't be?"*
 
@@ -324,11 +304,7 @@ which(is.na(subject_data$subject_id)) == which(subject_data$consent == "No")
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Logic Checks
-
-</h3>
+<h3>Logic Checks</h3>
 
 *"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
 
@@ -363,11 +339,7 @@ new_data <- data.frame("id" = sample(1:10))
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Uniqueness
-
-</h3>
+<h3>Uniqueness</h3>
 
 *"Should we expect data values to be unique or duplicated?"*
 
@@ -395,11 +367,7 @@ anyDuplicated(subject_data$subject_id) == 0
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-String Length
-
-</h3>
+<h3>String Length</h3>
 
 *"Is the string/character value of the right left given the context of the data?"*
 
@@ -433,11 +401,7 @@ sapply(us_zipcodes, function(x) nchar(x) == 5)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Formatting
-
-</h3>
+<h3>Formatting</h3>
 
 *"Is the general format of the data as we expect?"*
 
@@ -474,11 +438,7 @@ library(lubridate)
 
 ::: columns
 ::: {.column width="50%"}
-<h3>
-
-Range Checks
-
-</h3>
+<h3>Range Checks</h3>
 
 *"Does the data fall into an accepted pre-determined range?"*
 
@@ -516,11 +476,7 @@ subject_data
 
 <h1>
 
-<center>
-
-[What is `pointblank`?]{style="color: #ffffff;"}
-
-</center>
+<center>[What is `pointblank`?]{style="color: #ffffff;"}</center>
 
 </h1>
 
@@ -554,11 +510,7 @@ subject_data
 
 <h1>
 
-<center>
-
-[Why `pointblank`?]{style="color: #000000;"}
-
-</center>
+<center>[Why `pointblank`?]{style="color: #000000;"}</center>
 
 </h1>
 
@@ -571,30 +523,18 @@ subject_data
 ::: fragment
 However...
 
-<center>
-
-To a lowly beginner (like myself) `pointblank` *can* be overwhelming...
-
-</center>
+<center>To a lowly beginner (like myself) `pointblank` *can* be overwhelming...</center>
 :::
 
 ## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333" auto-animate="true"}
 
-<center>
-
-![](images/pb_functions.png){.memes width="1231" height="550"}
-
-</center>
+<center>![](images/pb_functions.png){.memes width="1231" height="550"}</center>
 
 ##  {.trans background-color="#ffffff" background-image="images/trans5.png" background-size="65%"}
 
 <h1>
 
-<center>
-
-[`pointblank` Use-Cases]{style="color: #ffffff;"}
-
-</center>
+<center>[`pointblank` Use-Cases]{style="color: #ffffff;"}</center>
 
 </h1>
 
@@ -616,11 +556,7 @@ To a lowly beginner (like myself) `pointblank` *can* be overwhelming...
 
 <br>
 
-<blockquote>
-
-We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃
-
-</blockquote>
+<blockquote>We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃</blockquote>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
@@ -737,7 +673,7 @@ patient_agent <- create_agent(tbl = example_data,
 ### Our Steps:
 
 1.  Create an "Agent"
-2.  Pipe in Validation Rules
+2.  Pipe in [Validation Rules](https://rich-iannone.github.io/pointblank/reference/index.html#validation-expectation-and-test-functions)
 :::
 :::
 
@@ -772,7 +708,7 @@ patient_agent %>%
 ### Our Steps:
 
 1.  Create an "Agent"
-2.  Pipe in Validation Rules\
+2.  Pipe in [Validation Rules](https://rich-iannone.github.io/pointblank/reference/index.html#validation-expectation-and-test-functions)
 3.  Interrogate the Agent
 :::
 :::
@@ -781,11 +717,7 @@ patient_agent %>%
 
 ### Interrogation Results in Viewer Pane:
 
-<center>
-
-![](images/dqr_result.png)
-
-</center>
+<center>![](images/dqr_result.png)</center>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
 
@@ -797,11 +729,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br><br> **Date/Time/Object Metadata**
-
-</center>
+<center><br><br><br> **Date/Time/Object Metadata**</center>
 :::
 :::
 
@@ -815,11 +743,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br> **`STEP`: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed**
-
-</center>
+<center><br><br> **`STEP`: The name of the validation functions used. Color-coded tabs let us know if a step was completed. Darker green means everything in the step passed**</center>
 :::
 :::
 
@@ -833,11 +757,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br><br> **`COLUMNS`: The target columns we told the agent to interrogate via our validation rules**
-
-</center>
+<center><br><br><br> **`COLUMNS`: The target columns we told the agent to interrogate via our validation rules**</center>
 :::
 :::
 
@@ -851,11 +771,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br> **`VALUES`: Any required values needed/used to test for validation if applicable.**
-
-</center>
+<center><br><br> **`VALUES`: Any required values needed/used to test for validation if applicable.**</center>
 :::
 :::
 
@@ -869,11 +785,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br> **`TBL`: Let's us know if the table was mutated in a validation step.** <br><br> **`EVAL`: Let's us know if there's issues R might have evaluating the table itself.**
-
-</center>
+<center><br><br> **`TBL`: Let's us know if the table was mutated in a validation step.** <br><br> **`EVAL`: Let's us know if there's issues R might have evaluating the table itself.**</center>
 :::
 :::
 
@@ -913,11 +825,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br><br> **`PASS`/`FAIL`: Gives the number/percentage of passing and failing unit tests**
-
-</center>
+<center><br><br><br> **`PASS`/`FAIL`: Gives the number/percentage of passing and failing unit tests**</center>
 :::
 :::
 
@@ -931,11 +839,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br> **`W,S,N`: Tells us if the validation steps have entered `WARN`, `STOP`, or `NOTIFY`. This is empty because there's no `action levels` set.**
-
-</center>
+<center><br><br> **`W,S,N`: Tells us if the validation steps have entered `WARN`, `STOP`, or `NOTIFY`. This is empty because there's no `action levels` set.**</center>
 :::
 :::
 
@@ -949,11 +853,7 @@ patient_agent %>%
 :::
 
 ::: {.column width="40%"}
-<center>
-
-<br><br><br> **`EXT`: Provides a download of a data extract of observations that failed any validations if applicable.**
-
-</center>
+<center><br><br><br> **`EXT`: Provides a download of a data extract of observations that failed any validations if applicable.**</center>
 :::
 :::
 
@@ -1027,11 +927,7 @@ patient_agent %>%
 
 ### Interrogation Results (With `action_levels()`) in Viewer Pane:
 
-<center>
-
-![](images/actionresults.png)
-
-</center>
+<center>![](images/actionresults.png)</center>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Pipeline Data Validation {.light background-color="#ffffff"}
 
@@ -1247,11 +1143,7 @@ example_data %>%
 ::: {.column width="50%"}
 <br><br><br>
 
-<center>
-
-Fails will [**halt**]{style="color:red;"} R's workflow
-
-</center>
+<center>Fails will [**halt**]{style="color:red;"} R's workflow</center>
 :::
 :::
 
@@ -1273,21 +1165,13 @@ example_data %>%
 ::: {.column width="50%"}
 <br><br><br>
 
-<center>
-
-Passes will [**maintain**]{style="color:green;"} R's workflow
-
-</center>
+<center>Passes will [**maintain**]{style="color:green;"} R's workflow</center>
 :::
 :::
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff"}
 
-<center>
-
-![](images/scan.png)
-
-</center>
+<center>![](images/scan.png)</center>
 
 ## <span style="color: #ffffff;">`pointblank` Use-Cases: Table Scans {.light background-color="#ffffff" auto-animate="true"}
 
@@ -1307,7 +1191,7 @@ example_data %>%
 :::
 
 ::: {.column width="50%"}
--   Simply use `scan_data()` to generated an automated [HTML output](table_scan.html) that gives information about the table.
+-   Simply use `scan_data()` to generate an automated [HTML output](table_scan.html) that gives information about the table.
 :::
 :::
 
@@ -1349,10 +1233,6 @@ example_data %>%
 
 <h1>
 
-<center>
-
-[Questions?]{style="color: #000000;"}
-
-</center>
+<center>[Questions?]{style="color: #000000;"}</center>
 
 </h1>

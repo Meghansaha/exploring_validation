@@ -1,0 +1,524 @@
+---
+title: "Exploring Data Validation"
+subtitle: "\"With The  `pointblank`  Package\""
+author: "Meghan Harris, MPH"
+institute: "Cleveland R User Group"
+date: "October 26th 2022 | 2022-10-26"
+format:
+  revealjs: 
+    slide-number: true
+    theme: theme.scss
+    css: theme.css
+    linkcolor: "#1a1a1a"
+    highlight-style: github
+    code-copy: true
+    code-overflow: wrap
+    code-block-bg: true
+    transition: fade
+    width: 1600
+editor: visual
+title-slide-attributes: 
+  data-background-image: "images/title_back.PNG"
+  data-background-size: "45%"
+  data-background-position: "right"
+---
+
+## [About Me]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<br>
+
+::: columns
+::: {.column width="40%"}
+![](images/headshot.jpg){#headshot}
+:::
+
+::: {.column width="60%"}
+-   I'm Meghan Harris 👋🏾
+-   Data Scientist 💻
+-   Prostate Cancer Clinical Trials Consortium (PCCTC) - Memorial Sloan Kettering ⚛️
+-   <a href="https://thetidytrekker.com" class="link">thetidytrekker.com</a> 🌐
+-   <a href="https://twitter.com/meghansharris" class="link">@meghansharris</a> ![](images/icons/twitter.png){width="40"}
+-   <a href="https://www.linkedin.com/in/meghan-harris/" class="link">meghan-harris</a> ![](images/icons/linkedin.png){width="35" height="35"}
+:::
+:::
+
+## <span style="color: #ffffff;">What are We Doing Today? {.light background-color="#ffffff"}
+
+::: incremental
+<br>
+
+-   What is Validation and Why Do We Care?
+
+-   Different Types of Validations
+
+-   What is `pointblank`?
+
+-   Why `pointblank`?
+
+-   `pointblank` Use-Cases
+:::
+
+## [Disclaimer]{style="color: #000000;"} {.dark background-color="#333333"}
+
+<center>
+
+<h1 style="margin-top:5%">
+
+I'm **ABSOLUTELY not an expert** in Data Validation or the `pointblank` package
+
+</h1>
+
+::: fragment
+![](images/phony.png){.memes width="500px" height="350px"}
+:::
+
+</center>
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+**Validation**: the action of checking or proving the accuracy of something.
+
+<br>
+
+::: fragment
+This can look like a lot of things:
+:::
+
+::: incremental
+-   Testing Data Inputs
+-   Testing Data Outputs
+-   Testing Pipeline Logic
+-   Enforcing Pipeline/Analysis/Data Rules
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+> Why is it important? ... Because...
+
+<br>
+
+::: {.fragment .fade-in-then-out}
+![](images/check_yourself.png){.memes fig-align="center"}
+:::
+
+::: fragment
+[.]{style="color:#ffffff;"}
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff" transition="none"}
+
+> Why is it important? ... Because...
+
+<br>
+
+::: incremental
+-   Your work is no good if it's not right
+-   Incorrect assumptions about data can be costly and unethical
+-   Real world data is usually complex and nuanced
+-   External controls may be lacking or non-existent
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+> The art of Data Validation is a Rabbit Hole
+
+![](images/rabbithole.png){.memes fig-align="center"}
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+> Don't fall for the *"Validation Crux"*
+
+![](images/perfectplan.png){.memes fig-align="center"}
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+<br>
+
+-   Data Validation is a "rabbithole" because you could probably spend an eternity thinking about the "best" plans for validation.
+
+::: incremental
+-   Deciding to think seriously about data validation is a humbling experience that should be done with care.
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+-   Data validation plans should be developed with a holistic, "systems" approach that includes any applicable third parties, data management teams, data collectors, etc.
+:::
+:::
+
+## <span style="color: #ffffff;">What is Validation? and Why Do We Care? {.light background-color="#ffffff"}
+
+<br>
+
+💡Remember:
+
+<br>
+
+> Start "small" by looking at the most important pieces of your data and figuring out the **minimum building blocks** of logic or assumptions that are needed to make a fairly confident guess that the data is actually accurate. It is normal for this to be an **iterative** process.
+
+<br>
+
+::: fragment
+***Different "types" of validations** can be considered as the building blocks you need to get started.*
+:::
+
+<br>
+
+## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
+
+::: {.fragment .fade-out}
+-   There are **eight basic types** that I always mention...but this list is NOT exhaustive:
+:::
+
+::: fragment
+[.]{style="color: #333333;"}
+:::
+
+## [Different Types of Validations]{style="color: #000000;"} {.dark background-color="#333333"}
+
+::: panel-tabset
+## ![Variable Type](images/vartype.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Variable Type</h3>
+
+*"Is this variable the same class/type we are expecting?"*
+
+<br>
+
+**Example:** - Is R reading this as a numeric or integer variable, or is it just a string impostor?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r vartype, echo = TRUE}
+
+# Variable Type Check - Base R
+actual_number <- 2022
+fake_number <- "2022"
+
+#Actual Number?
+is.numeric(actual_number)
+
+#Actual Number?
+is.numeric(fake_number)
+
+```
+:::
+:::
+
+## ![Allowed/Expected Values](images/expvalues.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Allowed/Expected Values</h3>
+
+*"Is the value of the variable one that is allowed or expected?"*
+
+<br>
+
+**Example:** - Can we confirm that the value R is reading makes sense given the context of allowed or expected values for this variable?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r expvalues, echo = TRUE}
+
+# Allowed/Expected Values Check - Base R
+age <- -99
+first_name <- "Meghan"
+
+#Is age a valid number and over the value of zero?
+is.numeric(age) & age > 0 
+
+#Is first name a character string?
+is.character(first_name)
+
+```
+:::
+:::
+
+## ![Missing Data](images/missingdata.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Missing Data</h3>
+
+*"Is there any missing data where there should/shouldn't be?"*
+
+<br>
+
+**Example:** - Do we logically expect any values in a variable to be missing or should missing data prompt us to investigate the data further?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r missingdata_prep, echo = FALSE}
+
+# Missing Data Check - Base R
+subject_data <- data.frame("subject_id" = c(345,123,NA),
+                           "consent" = c("Yes","Yes", "No"))
+
+```
+
+```{r missingdata, echo = TRUE}
+
+# Missing Data Check - Base R
+subject_data
+
+#Are IDs missing only for those w/ no consent?
+which(is.na(subject_data$subject_id)) == which(subject_data$consent == "No")
+
+```
+:::
+:::
+
+## ![Logic Checks](images/logiccheck.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Logic Checks</h3>
+
+*"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
+
+<br>
+
+**Example:** - Does the data make sense given the context of collection, processing, or analysis?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r logic_prep, echo = FALSE}
+
+# Logic Check - Base R
+old_data <- data.frame("id" = sample(1:10))
+new_data <- data.frame("id" = sample(1:10))
+```
+
+```{r logiccheck, echo = TRUE}
+
+# Logic Data Check - Base R
+
+# Is a new data frame different from an old data frame?#
+!identical(old_data, new_data)
+```
+:::
+:::
+
+## ![Logic Checks](images/uniqueness.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Logic Checks</h3>
+
+*"Is the data logically making sense upon delivery or after transformation/analyses/processing?"*
+
+<br>
+
+**Example:** - Does the data make sense given the context of collection, processing, or analysis?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r uniqueness, echo = TRUE}
+
+# Uniqueness Check - Base R
+#Check to see there are 0 duplicated IDs
+anyDuplicated(subject_data$subject_id) == 0
+
+```
+:::
+:::
+
+## ![String Length](images/stringlength.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>String Length</h3>
+
+*"Is the string/character value of the right left given the context of the data?"*
+
+<br>
+
+**Example:** - Is the string's length appropriate given the data's meaning?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r stringlengthprep, echo = FALSE}
+
+us_zipcodes <- c("14215", "14120", "142", "08796", "867")
+
+```
+
+```{r stringlength, echo = TRUE}
+
+# String Length Check - Base R
+#Do all of our "US zipcodes" have a string length of 5 characters?
+
+sapply(us_zipcodes, function(x) nchar(x) == 5)
+```
+:::
+:::
+
+## ![Formatting](images/formatting.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Formatting</h3>
+
+*"Is the general format of the data as we expect?"*
+
+<br>
+
+**Example:** - Can R confirm that our data matches a specific format that is needed for our work?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r formatprep, echo = FALSE}
+
+dates <- c("2022-08-04", "1998/06/12", "01-15-1943")
+
+```
+
+```{r format, echo = TRUE}
+
+# Data Format Check - Lubridate
+#Do all of our dates match the YYYY-MM-DD format?
+dates
+
+
+library(lubridate)
+!is.na(parse_date_time(dates,orders="ymd"))
+```
+:::
+:::
+
+## ![Range Checks](images/rangechecks.png){fig-align="left" width="110"}
+
+::: columns
+::: {.column width="50%"}
+<h3>Range Checks</h3>
+
+*"Does the data fall into an accepted pre-determined range?"*
+
+<br>
+
+**Example:** - Can R confirm that our data matches a specific range that fits within the context of the data?
+:::
+
+::: {.column .fragment width="50%"}
+<br>
+
+```{r rangeprep, echo = FALSE}
+
+subject_data <- data.frame("age" = sample(5:90, 3))
+
+```
+
+```{r range, echo = TRUE}
+
+# Range Check - Base R
+#Are all of the subjects 18 - 65 years old?
+
+subject_data$over_18 <- sapply(subject_data$age, 
+                               function(x) x >= 18 & x <= 65)
+
+subject_data
+```
+:::
+:::
+:::
+
+## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
+
+<br> Pointblank is an R package by [Rich Iannone](https://twitter.com/riannone) (author/maintainer) and Mauricio Vargas (author) that was created to assist with methodically validating data and keeping track of relevant *metadata (data about data)* in R.
+
+[![](images/logo.svg){fig-alt="pointblank" fig-align="center"}](https://rich-iannone.github.io/pointblank/reference/index.html)
+
+## <span style="color: #ffffff;">What is `pointblank`? {.light background-color="#ffffff"}
+
+`pointblank` currently has **6** presented validation workflows in the package:
+
+<br>
+
+1.  [VALID-I: Data Quality Reporting](https://rich-iannone.github.io/pointblank/articles/VALID-I.html)
+2.  [VALID-II: Pipeline Data Validation](https://rich-iannone.github.io/pointblank/articles/VALID-II.html)
+
+::: {.fragment .semi-fade-out}
+3.  [VALID-III: Expectations in Unit Tests](https://rich-iannone.github.io/pointblank/articles/VALID-III.html)
+4.  [VALID-IV: Data Tests for Conditionals](https://rich-iannone.github.io/pointblank/articles/VALID-IV.html)
+:::
+
+5.  [VALID-V: Table Scan](https://rich-iannone.github.io/pointblank/articles/VALID-V.html)
+6.  [VALID-VI: R Markdown Document Validation](https://rich-iannone.github.io/pointblank/articles/VALID-VI.html)
+
+## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333"}
+
+> While you can use base R and other relevant packages like [`validate`](https://github.com/data-cleaning/validate) or [`testthat`](https://testthat.r-lib.org/) for data validation and testing in R, `pointblank` is a validation package that has a heavy focus on implementing easy reporting and methodological validation schema with ease.
+
+<br>
+
+::: fragment
+However...
+
+<center>To a lowly beginner (like myself) `pointblank` *can* be overwhelming...</center>
+:::
+
+## <span style="color: #000000;">Why `pointblank`? {.dark background-color="#333333" auto-animate="true"}
+
+<center>![](images/pb_functions.png){.memes width="1231" height="550"}</center>
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/agent.png){style="opacity: 0;"}
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/agent.png)
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+![](images/table.png) ![](images/agent.png) ![](images/interrogate.png)
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+### Example Scenario:
+
+<br>
+
+<blockquote>We've got some aggregate study data that includes the total number of patients present in a US State for our clinical trial studies. Each total also has an associated report date that's recorded. Because this is the real world, there's no external control in the data collection process and it's pretty F-tier️🙃</blockquote>
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases: Data Quality Reporting {.light background-color="#ffffff"}
+
+### Example Data:
+
+```{r data-loadin, echo = TRUE}
+
+library(readr)
+example_data <- read_csv("data/example_data.csv")
+
+example_data
+
+```
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+
+### Pipeline Data Validation
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+
+### Table Scans
+
+## <span style="color: #ffffff;">`pointblank` Use-Cases {.light background-color="#ffffff"}
+
+### R Markdown Document Validation
