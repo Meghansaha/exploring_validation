@@ -24,25 +24,24 @@ validate their own data in R.
 The slides for this workshop can be viewed
 [here](https://meghansaha.github.io/exploring_validation/).
 
-It is expected that this presentation will be recorded and available on
-YouTube at a later date. The link will be placed here when the recording
-is complete and ready.
+This presentation was recorded and is available on YouTube
+[here](https://t.co/181jd0X3e9).
 
 ## More Data Validation Resources
 
--   The [The `pointblank`
-    Package](https://github.com/rich-iannone/pointblank) by [Rich
-    Iannone](https://twitter.com/riannone)
+- The [The `pointblank`
+  Package](https://github.com/rich-iannone/pointblank) by [Rich
+  Iannone](https://twitter.com/riannone)
 
--   The [`validate` package](https://github.com/data-cleaning/validate)
-    and The [*Data Validation
-    Cookbook*](https://data-cleaning.github.io/validate/) by [Mark van
-    der Loo](http://www.markvanderloo.eu/)
+- The [`validate` package](https://github.com/data-cleaning/validate)
+  and The [*Data Validation
+  Cookbook*](https://data-cleaning.github.io/validate/) by [Mark van der
+  Loo](http://www.markvanderloo.eu/)
 
--   [*A Lightweight Data Validation Ecosystem with R, GitHub, and
-    Slack*](https://emilyriederer.netlify.app/post/data-valid-lightweight/)
-    by [Emily Riederer](https://emilyriederer.netlify.app/about/)
+- [*A Lightweight Data Validation Ecosystem with R, GitHub, and
+  Slack*](https://emilyriederer.netlify.app/post/data-valid-lightweight/)
+  by [Emily Riederer](https://emilyriederer.netlify.app/about/)
 
--   The [`data.validator`
-    package](https://github.com/Appsilon/data.validator) by
-    [Appsilon](https://appsilon.com/)
+- The [`data.validator`
+  package](https://github.com/Appsilon/data.validator) by
+  [Appsilon](https://appsilon.com/)
